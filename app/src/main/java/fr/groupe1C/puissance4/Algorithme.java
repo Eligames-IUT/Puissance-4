@@ -93,7 +93,7 @@ public class Algorithme {
     *
     */
    public boolean ligneVerticale(int[][] grille, int couleur){
-      for(int i=0; i<2; i++){
+      for(int i=0; i<3; i++){
          for(int j=0; j<7; j++){
             if(grille[i][j]==couleur && grille[i+1][j]==couleur && grille[i+2][j]==couleur && grille[i+3][j]==couleur){
                return true;
