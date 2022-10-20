@@ -3,6 +3,8 @@ package fr.groupe1C.puissance4;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 
 import androidx.navigation.NavController;
@@ -14,56 +16,53 @@ import fr.groupe1C.puissance4.databinding.ActivityMainBinding;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
 
 public class MainActivity extends AppCompatActivity {
-    private TextView mTextView;
-    private editText mEditText;
-    private Button mButton;
 
+    private TextView mGreetingTextView;
+    private EditText mNameEditText;
+    private Button mPlayButton;
 
+   
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mTextView = findViewById(R.id.textview);
-        mEditText = findViewById(R.id.editext);
-        mButton = findViewById(R.id.button);
+        mGreetingTextView = findViewById(R.id.main_textview_greeting);
+        mNameEditText = findViewById(R.id.main_edittext_name);
+        mPlayButton = findViewById(R.id.main_button_play);
 
-        mEditText.addTextChangedListener(new TextWatcher() {
+        mPlayButton.setEnabled(false);
+
+        mNameEditText.addTextChangedListener(new TextWatcher() {
             @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
             }
 
             @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                mButton.setEnable(s.toString().length() != 0);
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
                 
+
             }
 
             @Override
-            public void afterTextChanged(Editable s) {
+            public void afterTextChanged(Editable editable) {
+                mPlayButton.setEnabled(!editable.toString().isEmpty());
             }
         });
 
-        mButton.setOnClickListener(new View.OnClickListener() {
+        mPlayButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                mTextView.setText(mEditText.getText().toString());
+            public void onClick(View view) {
+                String name = mNameEditText.getText().toString();
             }
         });
-
-        // on ajoute un listener sur la partie texte pour pouvoir modifier le texte
-        mTextView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mEditText.setText(mTextView.getText().toString());
-            }
-        });
-
-    }    
-
+    }
 }
