@@ -17,7 +17,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 public class Maquette extends AppCompatActivity {
-
+/**
     private TextView mTextView;
     private EditText mEditText;
     private Button mButton;
@@ -31,4 +31,6 @@ public class Maquette extends AppCompatActivity {
         mEditText = findViewById(R.id.edittext);
         mButton = findViewById(R.id.button);
     }
+
+    */
 }

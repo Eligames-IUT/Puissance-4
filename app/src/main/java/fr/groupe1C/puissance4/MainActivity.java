@@ -28,13 +28,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         mTextView = findViewById(R.id.textview);
-        // on recupere l'id de l'edittext
-        mEditText = findViewById(R.id.textNom);
+        mEditText = findViewById(R.id.editext);
         mButton = findViewById(R.id.button);
-
-        mButton.setEnable(false);
 
         mEditText.addTextChangedListener(new TextWatcher() {
             @Override
