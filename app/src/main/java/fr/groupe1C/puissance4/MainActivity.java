@@ -30,7 +30,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         mTextView = findViewById(R.id.textview);
-        mEditText = findViewById(R.id.edittext);
+        // on recupere l'id de l'edittext
+        mEditText = findViewById(R.id.textNom);
         mButton = findViewById(R.id.button);
 
         mButton.setEnable(false);
@@ -43,11 +44,12 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
+                mButton.setEnable(s.toString().length() != 0);
+                
             }
 
             @Override
             public void afterTextChanged(Editable s) {
-                mButton.setEnable(!editable.toString().isEmpty());
             }
         });
 

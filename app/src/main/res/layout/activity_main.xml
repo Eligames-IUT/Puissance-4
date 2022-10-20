@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+    <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -11,33 +11,30 @@
         android:layout_height="wrap_content"
         android:theme="@style/Theme.Puissance4.AppBarOverlay"
     />
-
+    
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Bienvenue sur le puissance 4" 
-        android:textSize="30sp" 
+        android:text="Bienvenue quelle est ton nom ?" 
+        android:layout_margin="16dp"
+        android:padding="8dp"
     />
     
-    <!--On demande a l'utilisateur de rentrer son nom et prénom-->
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Entrez votre nom"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
+        android:hint="Entre ton nom ici" 
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"  
     />
 
     <Button
-        andrtoid:layout_gravity="center-horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Jouer"
-        android:layout_marginTop="60dp"
-        android:layout_marginLeft="20dp"
-
-        />
+        android:layout_gravity="center_horizontal"
+        android_layout_margin="16dp"
+    />
 
 
 </android.support.design.widget.CoordinatorLayout>
