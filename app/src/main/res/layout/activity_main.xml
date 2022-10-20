@@ -16,7 +16,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Hello World" />
+        android:text="Bienvenue sur le puissance 4" 
+        android:textSize="30sp" 
+    />
+    
+    <!--On demande a l'utilisateur de rentrer son nom et prénom-->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Entrez votre nom"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+    />
+
+    <Button
+        andrtoid:layout_gravity="center-horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jouer"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="20dp"
+
+        />
 
 
 </android.support.design.widget.CoordinatorLayout>
