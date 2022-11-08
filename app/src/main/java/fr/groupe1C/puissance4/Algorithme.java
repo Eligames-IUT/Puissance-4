@@ -32,6 +32,33 @@ public class Algorithme {
       return meilleurCoup;
    }
 
+   // méthode qui écoute les events des clics sur les colonnes
+   public void sourisCliquer(MouseEvent e) {
+      // on récupère la colonne sur laquelle on a cliqué
+      int colonne = e.getX() / 100;
+      // on vérifie si la colonne est pleine
+      if (colonnePleine(colonne)) {
+         // on affiche un message d'erreur
+         System.err.println("La colonne est pleine");
+      } else {
+         // on joue le coup
+         jouerColonne(colonne);
+      }
+   }
+
+   // méthode qui permet au joeur de jouer un coup en cliquant sur une colonne
+   public static void jouerColonne(int colonne) {
+      // on parcourt les lignes de la colonne
+      for (int i = 0; i < Grille.grille.length; i++) {
+         // si la case est vide
+         if (Grille.grille[i][colonne] == 0) {
+            // on joue le coup
+            Grille.grille[i][colonne] = Grille.joueurCourant;
+            break;
+         }
+      }
+   }
+
 
    /**
     * 

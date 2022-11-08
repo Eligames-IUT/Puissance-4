@@ -55,6 +55,7 @@ public class Joueur {
             // on joue le coup
             algorithme.jouerColonne(colonne);
         }
+        
     }
 
 }
