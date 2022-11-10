@@ -18,6 +18,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.GridLayout;
 import android.widget.TextView;
 
 import java.util.LinkedList;
@@ -30,17 +31,15 @@ public class MainActivity extends AppCompatActivity {
     private TextView mGreetingTextView;
     private EditText mNameEditText;
     // on recupere les colonnes avec l'id colonne 1,2,3,4,5,6,7 dans activity_game.xml
-    private Colonne mColonne1;
-    private Colonne mColonne2;
-    private Colonne mColonne3;
-    private Colonne mColonne4;
-    private Colonne mColonne5;
-    private Colonne mColonne6;
-    private Colonne mColonne7;  
+    private GridLayout mColonne1;
+    private GridLayout mColonne2;
+    private GridLayout mColonne3;
+    private GridLayout mColonne4;
+    private GridLayout mColonne5;
+    private GridLayout mColonne6;
+    private GridLayout mColonne7;
     
 
-
-   
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -48,12 +47,25 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_game);
 
         // on récupere les colonnes dans une file LinkedList<Colonne>
-        Queue<Colonne> colonnes = new LinkedList<Colonne>();
-        for (int i = 1; i <= 7; i++) {
+        Queue<GridLayout> colonnes = new LinkedList<>();
+        mColonne1 = findViewById(R.id.colonne1);
+        mColonne2 = findViewById(R.id.colonne2);
+        mColonne3 = findViewById(R.id.colonne3);
+        mColonne4 = findViewById(R.id.colonne4);
+        mColonne5 = findViewById(R.id.colonne5);
+        mColonne6 = findViewById(R.id.colonne6);
+        mColonne7 = findViewById(R.id.colonne7);
+
+        colonnes.add(new GridLayout(mColonne1));
+        colonnes.add(new GridLayout(mColonne2));
+        colonnes.add(new GridLayout(mColonne3));
+        colonnes.add(new GridLayout(mColonne4));
+        colonnes.add(new GridLayout(mColonne5));
+        colonnes.add(new GridLayout(mColonne6));
+        colonnes.add(new GridLayout(mColonne7));
+        /*for (int i = 1; i <= 7; i++) {
             int id = getResources().getIdentifier("colonne" + i, "id", getPackageName());
-            Button colonne = findViewById(id);
-            colonnes.add(new Colonne(colonne));
-        }
+        }*/
 
         // on affiche les colonnes dans la console
         for (Colonne colonne : colonnes) {
