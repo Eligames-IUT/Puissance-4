@@ -7,6 +7,7 @@ public class Colonne {
         for(int i = 0; i < 6; i++) {
             colonne[i] = 0;
         }
+        this.setOnClickListener(new ListenerJeux());
     }
 
     public int[] getColonne() {
