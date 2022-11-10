@@ -7,4 +7,11 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="rougef">#ce0000</color>
+    <color name="noir">#000000</color>
+    <color name="bleuf">#104163</color>
+    <color name="bleuc">#0092ff</color>
+    <color name="jaune">#fff300</color>
+    <color name="rougec">#ff0000</color>
+    <color name="violet">#8300ff</color>
 </resources>

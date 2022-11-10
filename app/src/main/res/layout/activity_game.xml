@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Eligames"
+        android:textColor="@color/black"
+        android:textSize="@android:dimen/app_icon_size"
+        android:layout_centerHorizontal="true"/>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:rowCount="1"
+        android:columnCount="7">
+
+        <GridLayout
+            android:id="@+id/colonne1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rowCount="6"
+            android:columnCount="1">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+            <TextView
+                android:layout_height="30dp"
+                android:layout_width="30dp" />
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+            <TextView
+                android:layout_height="30dp"
+                android:layout_width="30dp" />
+            <TextView
+                android:layout_height="30dp"
+                android:layout_width="30dp" />
+        </GridLayout>
+
+        <GridLayout
+            android:id="@+id/colonne2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rowCount="6"
+            android:columnCount="1">
+            <TextView
+                android:layout_height="30dp"
+                android:layout_width="30dp" />
+            <TextView
+                android:layout_height="30dp"
+                android:layout_width="30dp" />
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+            <TextView
+                android:layout_height="30dp"
+                android:layout_width="30dp" />
+            <TextView
+                android:layout_height="30dp"
+                android:layout_width="30dp" />
+        </GridLayout>
+
+        <GridLayout
+            android:id="@+id/colonne3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rowCount="6"
+            android:columnCount="1">
+            <TextView
+                android:layout_height="30dp"
+                android:layout_width="30dp" />
+            <TextView
+                android:layout_height="30dp"
+                android:layout_width="30dp" />
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+            <TextView
+                android:layout_height="30dp"
+                android:layout_width="30dp" />
+            <TextView
+                android:layout_height="30dp"
+                android:layout_width="30dp" />
+        </GridLayout>
+
+        <GridLayout
+            android:id="@+id/colonne4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rowCount="6"
+            android:columnCount="1">
+            <TextView
+                android:layout_height="30dp"
+                android:layout_width="30dp" />
+            <TextView
+                android:layout_height="30dp"
+                android:layout_width="30dp" />
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+            <TextView
+                android:layout_height="30dp"
+                android:layout_width="30dp" />
+            <TextView
+                android:layout_height="30dp"
+                android:layout_width="30dp" />
+        </GridLayout>
+
+        <GridLayout
+            android:id="@+id/colonne5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rowCount="6"
+            android:columnCount="1">
+            <TextView
+                android:layout_height="30dp"
+                android:layout_width="30dp" />
+            <TextView
+                android:layout_height="30dp"
+                android:layout_width="30dp" />
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+            <TextView
+                android:layout_height="30dp"
+                android:layout_width="30dp" />
+            <TextView
+                android:layout_height="30dp"
+                android:layout_width="30dp" />
+        </GridLayout>
+
+        <GridLayout
+            android:id="@+id/colonne6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rowCount="6"
+            android:columnCount="1">
+            <TextView
+                android:layout_height="30dp"
+                android:layout_width="30dp" />
+            <TextView
+                android:layout_height="30dp"
+                android:layout_width="30dp" />
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+            <TextView
+                android:layout_height="30dp"
+                android:layout_width="30dp" />
+            <TextView
+                android:layout_height="30dp"
+                android:layout_width="30dp" />
+        </GridLayout>
+
+        <GridLayout
+            android:id="@+id/colonne7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rowCount="6"
+            android:columnCount="1">
+            <TextView
+                android:layout_height="30dp"
+                android:layout_width="30dp" />
+            <TextView
+                android:layout_height="30dp"
+                android:layout_width="30dp" />
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+            <TextView
+                android:layout_height="30dp"
+                android:layout_width="30dp" />
+            <TextView
+                android:layout_height="30dp"
+                android:layout_width="30dp" />
+        </GridLayout>
+    </GridLayout>
+
+
+</RelativeLayout>
