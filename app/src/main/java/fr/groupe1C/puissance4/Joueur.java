@@ -1,4 +1,5 @@
 package fr.groupe1C.puissance4;
+import ai.MiniMaxCombined;
 
 import java.awt.Color;
 
