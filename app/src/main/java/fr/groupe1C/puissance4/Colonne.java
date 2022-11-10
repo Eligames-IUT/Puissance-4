@@ -9,6 +9,11 @@ public class Colonne {
     }
 
     public int[] getColonne() {
-        return colonne;
+        return this.colonne;
+    }
+
+    public int[] setColonne(int[] colonne) {
+        this.colonne = colonne;
+        return this.colonne;
     }
 }

@@ -1,7 +1,6 @@
 public class Grille {
     
     private int ligne = 6;
-    Colonne colonne = new Colonne();
     private int[][] grille = new int[ligne][colonne];
 
 
@@ -17,5 +16,7 @@ public class Grille {
     // getter de la grille
     public int[][] getGrille() {
         return grille;
-    }    
+    }
+    
+    
 }
