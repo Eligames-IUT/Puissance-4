@@ -43,12 +43,12 @@ public class GamePanel extends JPanel{
         
         
         // Impression en console de la grille
-        for (int i=0;i<7;i++){
-            for (int j=0;j<6;j++){
-                System.out.println(grille.getGrille()[i][j]);
+        for (int i=0;i<6;i++){
+            for (int j=0;j<7;j++){
+                System.out.print(grille.getGrille()[i][j]);
             }
+            System.out.println();
         }
-
         
 
 
