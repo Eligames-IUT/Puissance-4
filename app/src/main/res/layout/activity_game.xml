@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:paddingLeft="10dp"
     android:paddingRight="10dp"
-    android:background="@color/white">
+    android:background="@color/beige">
 
     <TextView
         android:id="@+id/title"
@@ -16,6 +16,7 @@
         android:layout_centerHorizontal="true"/>
 
     <GridLayout
+        android:id="@+id/grille"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -31,23 +32,23 @@
             android:columnCount="1">
 
             <TextView
-                android:layout_width="30dp"
-                android:layout_height="30dp" />
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
             <TextView
-                android:layout_height="30dp"
-                android:layout_width="30dp" />
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
             <TextView
-                android:layout_width="30dp"
-                android:layout_height="30dp"/>
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
             <TextView
-                android:layout_width="30dp"
-                android:layout_height="30dp" />
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
             <TextView
-                android:layout_height="30dp"
-                android:layout_width="30dp" />
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
             <TextView
-                android:layout_height="30dp"
-                android:layout_width="30dp" />
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
         </GridLayout>
 
         <GridLayout
@@ -57,23 +58,23 @@
             android:rowCount="6"
             android:columnCount="1">
             <TextView
-                android:layout_height="30dp"
-                android:layout_width="30dp" />
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
             <TextView
-                android:layout_height="30dp"
-                android:layout_width="30dp" />
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
             <TextView
-                android:layout_width="30dp"
-                android:layout_height="30dp"/>
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
             <TextView
-                android:layout_width="30dp"
-                android:layout_height="30dp" />
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
             <TextView
-                android:layout_height="30dp"
-                android:layout_width="30dp" />
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
             <TextView
-                android:layout_height="30dp"
-                android:layout_width="30dp" />
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
         </GridLayout>
 
         <GridLayout
@@ -83,23 +84,23 @@
             android:rowCount="6"
             android:columnCount="1">
             <TextView
-                android:layout_height="30dp"
-                android:layout_width="30dp" />
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
             <TextView
-                android:layout_height="30dp"
-                android:layout_width="30dp" />
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
             <TextView
-                android:layout_width="30dp"
-                android:layout_height="30dp"/>
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
             <TextView
-                android:layout_width="30dp"
-                android:layout_height="30dp" />
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
             <TextView
-                android:layout_height="30dp"
-                android:layout_width="30dp" />
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
             <TextView
-                android:layout_height="30dp"
-                android:layout_width="30dp" />
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
         </GridLayout>
 
         <GridLayout
@@ -109,23 +110,23 @@
             android:rowCount="6"
             android:columnCount="1">
             <TextView
-                android:layout_height="30dp"
-                android:layout_width="30dp" />
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
             <TextView
-                android:layout_height="30dp"
-                android:layout_width="30dp" />
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
             <TextView
-                android:layout_width="30dp"
-                android:layout_height="30dp"/>
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
             <TextView
-                android:layout_width="30dp"
-                android:layout_height="30dp" />
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
             <TextView
-                android:layout_height="30dp"
-                android:layout_width="30dp" />
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
             <TextView
-                android:layout_height="30dp"
-                android:layout_width="30dp" />
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
         </GridLayout>
 
         <GridLayout
@@ -135,23 +136,23 @@
             android:rowCount="6"
             android:columnCount="1">
             <TextView
-                android:layout_height="30dp"
-                android:layout_width="30dp" />
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
             <TextView
-                android:layout_height="30dp"
-                android:layout_width="30dp" />
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
             <TextView
-                android:layout_width="30dp"
-                android:layout_height="30dp"/>
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
             <TextView
-                android:layout_width="30dp"
-                android:layout_height="30dp" />
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
             <TextView
-                android:layout_height="30dp"
-                android:layout_width="30dp" />
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
             <TextView
-                android:layout_height="30dp"
-                android:layout_width="30dp" />
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
         </GridLayout>
 
         <GridLayout
@@ -161,23 +162,23 @@
             android:rowCount="6"
             android:columnCount="1">
             <TextView
-                android:layout_height="30dp"
-                android:layout_width="30dp" />
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
             <TextView
-                android:layout_height="30dp"
-                android:layout_width="30dp" />
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
             <TextView
-                android:layout_width="30dp"
-                android:layout_height="30dp"/>
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
             <TextView
-                android:layout_width="30dp"
-                android:layout_height="30dp" />
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
             <TextView
-                android:layout_height="30dp"
-                android:layout_width="30dp" />
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
             <TextView
-                android:layout_height="30dp"
-                android:layout_width="30dp" />
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
         </GridLayout>
 
         <GridLayout
@@ -187,25 +188,32 @@
             android:rowCount="6"
             android:columnCount="1">
             <TextView
-                android:layout_height="30dp"
-                android:layout_width="30dp" />
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
             <TextView
-                android:layout_height="30dp"
-                android:layout_width="30dp" />
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
             <TextView
-                android:layout_width="30dp"
-                android:layout_height="30dp"/>
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
             <TextView
-                android:layout_width="30dp"
-                android:layout_height="30dp" />
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
             <TextView
-                android:layout_height="30dp"
-                android:layout_width="30dp" />
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
             <TextView
-                android:layout_height="30dp"
-                android:layout_width="30dp" />
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
         </GridLayout>
     </GridLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/grille"
+        android:layout_alignBottom="@id/grille"
+        android:src="@drawable/grille"/>
 
 
 </RelativeLayout>
