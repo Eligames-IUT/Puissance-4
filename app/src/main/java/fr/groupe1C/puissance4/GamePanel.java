@@ -16,6 +16,10 @@ public class GamePanel extends JPanel{
         frame.add(panel);
         frame.setVisible(true);
 
+        // on crée une grille
+        Grille grille = new Grille();
+        
+
         
 
 
