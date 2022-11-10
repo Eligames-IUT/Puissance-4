@@ -10,7 +10,7 @@
     android:layout_marginTop="200dip">
 
     <TextView
-        android:id="@+id/question1"
+        android:id="@+id/q1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
@@ -21,7 +21,7 @@
         android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold"
-        tools:text="Ce jeu vous a-t-il plus ? " />
+        tools:text="Ce jeu vous a-t-il plus ?" />
 
 
     <Button
@@ -33,7 +33,7 @@
         android:layout_weight="0"
         android:padding="16dp"
         android:textSize="20sp"
-        tools:text="OUI OUI" />
+        tools:text="OUI" />
 
     <Button
         android:id="@+id/non1"
@@ -46,5 +46,16 @@
         android:textSize="20sp"
         tools:text="non" />
 
+    <Button
+        android:id="@+id/pas_avis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="8dp"
+        android:layout_weight="0"
+        android:padding="16dp"
+        android:textSize="10sp"
+        android:textStyle="normal"
+        android:text="Je ne souhaite pas répondre" />
 
 </LinearLayout>

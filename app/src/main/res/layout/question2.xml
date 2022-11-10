@@ -51,17 +51,7 @@
             android:textSize="20sp"
             android:text="NON" />
 
-        <Button
-            android:id="@+id/pas_avis"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_margin="8dp"
-            android:layout_weight="0"
-            android:padding="16dp"
-            android:textSize="10sp"
-            android:textStyle="normal"
-            android:text="Je ne souhaite pas répondre" />
+
 
 
     </LinearLayout>
