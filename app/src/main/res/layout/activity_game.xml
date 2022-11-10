@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingLeft="10dp"
     android:paddingRight="10dp"
     android:background="@color/beige">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Puissance 4"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:layout_below="@id/title"
 
     <TextView
         android:id="@+id/title"
@@ -208,15 +218,24 @@
         android:src="@drawable/grille"/>
 
     <TextView
+        android:id="@+id/j1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/grille"
         android:layout_marginTop="@android:dimen/app_icon_size"
-        android:bor
         android:text="Joueur 1"
-        android:textSize="@android:dimen/app_icon_size"
-        android:background="@color/rougef"/>
+        android:textSize="40sp"
+        android:textColor="@color/black"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/j1"
+        android:layout_marginTop="@android:dimen/app_icon_size"
+        android:text="Joueur 2"
+        android:textSize="40sp"
+        android:textColor="@color/black"/>
 
 </RelativeLayout>
