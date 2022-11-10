@@ -1,4 +1,6 @@
 package src.main.java.fr.groupe1C.puissance4;
+import android.view.View;
+
 public class Grille {
     
     private int ligne = 6;

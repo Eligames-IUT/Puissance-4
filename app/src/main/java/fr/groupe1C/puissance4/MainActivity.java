@@ -25,44 +25,50 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView mGreetingTextView;
     private EditText mNameEditText;
-    private Button mPlayButton;
+    // on recupere les colonnes avec l'id colonne 1,2,3,4,5,6,7 dans activity_game.xml
+    private Button mColonne1;
+    private Button mColonne2;
+    private Button mColonne3;
+    private Button mColonne4;
+    private Button mColonne5;
+    private Button mColonne6;
+    private Button mColonne7;
+
+    private lateinit var binding: ActivityMainBinding
+
+
+
 
    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_game);
 
-        mGreetingTextView = findViewById(R.id.main_textview_greeting);
-        mNameEditText = findViewById(R.id.main_edittext_name);
-        mPlayButton = findViewById(R.id.main_button_play);
+        // on récupere les colonnes
+        mColonne1 = findViewById(R.id.colonne1);
+        mColonne2 = findViewById(R.id.colonne2);
+        mColonne3 = findViewById(R.id.colonne3);
+        mColonne4 = findViewById(R.id.colonne4);
+        mColonne5 = findViewById(R.id.colonne5);
+        mColonne6 = findViewById(R.id.colonne6);
+        mColonne7 = findViewById(R.id.colonne7);
 
-        mPlayButton.setEnabled(false);
+        // on récupere le textview
+        mGreetingTextView = findViewById(R.id.greeting_text);
+        // on récupere l'edittext
+        mNameEditText = findViewById(R.id.name_edit_text);
 
-        mNameEditText.addTextChangedListener(new TextWatcher() {
+        // on ajoute un listener sur les colonnes pour savoir quand on clique dessus
+        mColonne1.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-                mPlayButton.setEnabled(!editable.toString().isEmpty());
-            }
-        });
-
-        mPlayButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String name = mNameEditText.getText().toString();
+            public void onClick(View v) {
+                // on affiche un message
+                Snackbar.make(v, "Colonne 1", Snackbar.LENGTH_LONG).show();
             }
         });
+
+
     }
 }
