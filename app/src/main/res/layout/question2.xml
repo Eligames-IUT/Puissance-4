@@ -26,7 +26,7 @@
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:text="Voulez-vous nous donner un avis sur notre Application ?" />
+            android:text="Voulez-vous nous donner un avis sur notre Application ? " />
 
 
         <Button
