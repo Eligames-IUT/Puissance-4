@@ -1,3 +1,4 @@
+package src.main.java.fr.groupe1C.puissance4;
 public class Colonne {
     
     private int[] colonne = new int[6];

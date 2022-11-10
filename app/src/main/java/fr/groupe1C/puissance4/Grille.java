@@ -1,6 +1,8 @@
+package src.main.java.fr.groupe1C.puissance4;
 public class Grille {
     
     private int ligne = 6;
+    private int colonne = 7;
     private int[][] grille = new int[ligne][colonne];
 
 
