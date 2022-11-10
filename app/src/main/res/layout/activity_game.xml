@@ -15,21 +15,19 @@
         android:textSize="@android:dimen/app_icon_size"
         android:layout_centerHorizontal="true"/>
 
-    <GridLayout
+    <LinearLayout
         android:id="@+id/grille"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:rowCount="1"
-        android:columnCount="7">
+        android:orientation="horizontal">
 
-        <GridLayout
+        <LinearLayout
             android:id="@+id/colonne1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:rowCount="6"
-            android:columnCount="1">
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="40dp"
@@ -49,14 +47,13 @@
             <TextView
                 android:layout_height="40dp"
                 android:layout_width="40dp" />
-        </GridLayout>
+        </LinearLayout>
 
-        <GridLayout
+        <LinearLayout
             android:id="@+id/colonne2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:rowCount="6"
-            android:columnCount="1">
+            android:orientation="vertical">
             <TextView
                 android:layout_height="40dp"
                 android:layout_width="40dp" />
@@ -75,14 +72,13 @@
             <TextView
                 android:layout_height="40dp"
                 android:layout_width="40dp" />
-        </GridLayout>
+        </LinearLayout>
 
-        <GridLayout
+        <LinearLayout
             android:id="@+id/colonne3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:rowCount="6"
-            android:columnCount="1">
+            android:orientation="vertical">
             <TextView
                 android:layout_height="40dp"
                 android:layout_width="40dp" />
@@ -101,14 +97,13 @@
             <TextView
                 android:layout_height="40dp"
                 android:layout_width="40dp" />
-        </GridLayout>
+        </LinearLayout>
 
-        <GridLayout
+        <LinearLayout
             android:id="@+id/colonne4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:rowCount="6"
-            android:columnCount="1">
+            android:orientation="vertical">
             <TextView
                 android:layout_height="40dp"
                 android:layout_width="40dp" />
@@ -127,14 +122,13 @@
             <TextView
                 android:layout_height="40dp"
                 android:layout_width="40dp" />
-        </GridLayout>
+        </LinearLayout>
 
-        <GridLayout
+        <LinearLayout
             android:id="@+id/colonne5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:rowCount="6"
-            android:columnCount="1">
+            android:orientation="vertical">
             <TextView
                 android:layout_height="40dp"
                 android:layout_width="40dp" />
@@ -153,14 +147,13 @@
             <TextView
                 android:layout_height="40dp"
                 android:layout_width="40dp" />
-        </GridLayout>
+        </LinearLayout>
 
-        <GridLayout
+        <LinearLayout
             android:id="@+id/colonne6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:rowCount="6"
-            android:columnCount="1">
+            android:orientation="vertical">
             <TextView
                 android:layout_height="40dp"
                 android:layout_width="40dp" />
@@ -179,14 +172,13 @@
             <TextView
                 android:layout_height="40dp"
                 android:layout_width="40dp" />
-        </GridLayout>
+        </LinearLayout>
 
-        <GridLayout
+        <LinearLayout
             android:id="@+id/colonne7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:rowCount="6"
-            android:columnCount="1">
+            android:orientation="vertical">
             <TextView
                 android:layout_height="40dp"
                 android:layout_width="40dp" />
@@ -205,8 +197,8 @@
             <TextView
                 android:layout_height="40dp"
                 android:layout_width="40dp" />
-        </GridLayout>
-    </GridLayout>
+        </LinearLayout>
+    </LinearLayout>
 
     <ImageView
         android:layout_width="wrap_content"
@@ -214,6 +206,17 @@
         android:layout_alignTop="@id/grille"
         android:layout_alignBottom="@id/grille"
         android:src="@drawable/grille"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/grille"
+        android:layout_marginTop="@android:dimen/app_icon_size"
+        android:bor
+        android:text="Joueur 1"
+        android:textSize="@android:dimen/app_icon_size"
+        android:background="@color/rougef"/>
 
 
 </RelativeLayout>
