@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-package fr.groupe1C.puissance4;
-=======
 package src.main.java.fr.groupe1C.puissance4;
 
->>>>>>> fd5931944d878e576dc9d64b8b8dcc28f12c1859
 public class Colonne {
 
     private int[] colonne;

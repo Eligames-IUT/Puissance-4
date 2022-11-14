@@ -1,11 +1,7 @@
 package fr.groupe1C.puissance4;
 
 
-<<<<<<< HEAD
 public class GamePanel{
-=======
-public class GamePanel extends JPanel{
->>>>>>> fd5931944d878e576dc9d64b8b8dcc28f12c1859
 
     // main
     public static void main(String[] args) {
