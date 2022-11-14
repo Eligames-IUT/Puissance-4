@@ -6,7 +6,18 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="8dp"
-    android:layout_marginTop="200dip">
+    android:layout_marginTop="200dip"
+    tools:context=".InterPage.Question1">
+
+<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    tools:context=".MainActivity"-->
+
+
+
 
     <TextView
         android:id="@+id/q1"
@@ -58,3 +69,5 @@
         android:text="Je ne souhaite pas répondre" />
 
 </LinearLayout>
+
+
