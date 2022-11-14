@@ -1,4 +1,4 @@
-package fr.groupe1C.puissance4;
+package main.java.fr.groupe1C.puissance4;
 
 public class Colonne {
 
@@ -7,7 +7,7 @@ public class Colonne {
     public Colonne(int size){
         this.colonne = new int[size];
         for(int i = 0; i < size; i++) {
-            this.colonne[i] = 0;
+            colonne[i] = 0;
         }
     }
 

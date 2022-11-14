@@ -1,5 +1,4 @@
-// on connecte le java au xml
-package src.main.java.fr.groupe1C.puissance4;
+package main.java.fr.groupe1C.puissance4;
 
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;

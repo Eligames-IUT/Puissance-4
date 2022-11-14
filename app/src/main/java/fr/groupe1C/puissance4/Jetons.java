@@ -1,16 +1,15 @@
-package fr.groupe1C.puissance4;
+package main.java.fr.groupe1C.puissance4;
 
 
-
-public class Jeton {
+public class Jetons {
 
     private Joueur player;
 
-    public Jeton(Joueur player) {
+    public Jetons(Joueur player) {
         this.player = player;
     }
 
-    public Joueur getPlayer() {
+    public Joueur getJoueur() {
         return player;
     }
 }

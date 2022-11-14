@@ -1,8 +1,7 @@
-package fr.groupe1C.puissance4;
+package main.java.fr.groupe1C.puissance4;
 
 import java.util.ArrayList;
 import java.util.List;
-
 
 /**
  * @author Julien Charbonnel
@@ -21,7 +20,7 @@ public class Cellules {
     public Cellules(int x, int y) {
         this.x = x;
         this.y = y;
-        this.id = spaces.size();
+        this.id = cellules.size();
         cellules.add(this);
     }
 
@@ -33,7 +32,7 @@ public class Cellules {
         return y;
     }
 
-    public Token getContent() {
+    public Jetons getContent() {
         return content;
     }
 
