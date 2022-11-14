@@ -1,8 +1,11 @@
 package fr.groupe1C.puissance4;
+
+import android.support.v7.app.AppCompatActivity;
 import android.widget.LinearLayout;
 import android.os.Bundle;
 import android.view.View;
-public class Grille {
+
+public class Grille extends AppCompatActivity {
 
     private int ligne;
     private int colonne;

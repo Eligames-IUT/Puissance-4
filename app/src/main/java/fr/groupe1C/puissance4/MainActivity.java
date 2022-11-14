@@ -56,19 +56,19 @@ public class MainActivity extends AppCompatActivity {
         mColonne6 = findViewById(R.id.colonne6);
         mColonne7 = findViewById(R.id.colonne7);
 
-        colonnes.add(new LinearLayout(mColonne1));
-        colonnes.add(new LinearLayout(mColonne2));
-        colonnes.add(new LinearLayout(mColonne3));
-        colonnes.add(new LinearLayout(mColonne4));
-        colonnes.add(new LinearLayout(mColonne5));
-        colonnes.add(new LinearLayout(mColonne6));
-        colonnes.add(new LinearLayout(mColonne7));
+        colonnes.add(mColonne1);
+        colonnes.add(mColonne2);
+        colonnes.add(mColonne3);
+        colonnes.add(mColonne4);
+        colonnes.add(mColonne5);
+        colonnes.add(mColonne6);
+        colonnes.add(mColonne7);
         /*for (int i = 1; i <= 7; i++) {
             int id = getResources().getIdentifier("colonne" + i, "id", getPackageName());
         }*/
 
         // on affiche les colonnes dans la console
-        for (Colonne colonne : colonnes) {
+        for (LinearLayout colonne : colonnes) {
             System.out.println(colonne);
         }
     }
