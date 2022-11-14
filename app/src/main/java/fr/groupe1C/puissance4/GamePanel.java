@@ -2,7 +2,6 @@ package src.main.java.fr.groupe1C.puissance4;
 import javax.swing.*;
 
 
-
 public class GamePanel extends JPanel{
 
     // main
