@@ -1,4 +1,4 @@
-package src.main.java.fr.groupe1C.puissance4;
+package fr.groupe1C.puissance4;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
