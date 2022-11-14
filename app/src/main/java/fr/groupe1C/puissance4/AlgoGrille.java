@@ -1,4 +1,4 @@
-package fr.groupe1C.puissance4;
+package src.main.java.fr.groupe1C.puissance4;
 
 /**
  * 
@@ -8,7 +8,7 @@ package fr.groupe1C.puissance4;
  * 
  */
 
-public class Grille {
+public class AlgoGrille {
 
 
    /**

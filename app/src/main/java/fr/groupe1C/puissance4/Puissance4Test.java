@@ -1,9 +1,9 @@
-package fr.groupe1C.puissance4;
+package src.main.java.fr.groupe1C.puissance4;
 
-public class Puissance4{
+public class Puissance4Test{
     private int[][] grille;
 
-    public Puissance4(){
+    public Puissance4Test(){
         
         int[][] puiss4 = new int[6][7]; 
         this.grille = new int[6][7]; 

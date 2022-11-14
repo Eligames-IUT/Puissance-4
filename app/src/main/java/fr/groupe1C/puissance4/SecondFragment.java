@@ -1,4 +1,4 @@
-package fr.groupe1C.puissance4;
+package src.main.java.fr.groupe1C.puissance4;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

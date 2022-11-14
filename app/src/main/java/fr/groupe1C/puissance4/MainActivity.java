@@ -67,36 +67,9 @@ public class MainActivity extends AppCompatActivity {
             int id = getResources().getIdentifier("colonne" + i, "id", getPackageName());
         }*/
 
-<<<<<<< HEAD
         // on affiche les colonnes dans la console
         for (Colonne colonne : colonnes) {
             System.out.println(colonne);
         }
-=======
-        mNameEditText.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-q
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-                mPlayButton.setEnabled(!editable.toString().isEmpty());
-            }
-        });
-
-        mPlayButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String name = mNameEditText.getText().toString();
-            }
-        });
->>>>>>> GrilleXml
     }
 }
