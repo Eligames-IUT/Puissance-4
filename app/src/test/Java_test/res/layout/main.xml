@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="@drawable/wallpaper" android:weightSum="1"
+              android:id="@+id/layout">
+
+    <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SINGLE PLAYER"
+            android:alpha="0.7"
+            android:id="@+id/btnSingle" android:layout_gravity="center_horizontal" android:layout_weight="0.20"
+            android:textSize="28dp"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MULTIPLAYER"
+        android:alpha="0.7"
+        android:textSize="28dp"
+        android:id="@+id/btnMulti" android:layout_gravity="center_horizontal" android:layout_weight="0.20"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SETTINGS"
+        android:alpha="0.7"
+        android:textSize="28dp"
+        android:id="@+id/btnSettings" android:layout_gravity="center_horizontal" android:layout_weight="0.10"/>
+</LinearLayout>
+
