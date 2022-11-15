@@ -11,6 +11,10 @@ public class Joueur {
     private Level level = Level.NO;
     private Color color;
     protected List<Jetons> Jetonss = new ArrayList<Jetons>();
+    private int score;
+    private Color couleur;
+    private boolean peutJoeur;
+    private boolean passerSonTour;
 
     public Joueur(Color color) {
         Joueurs.add(this);

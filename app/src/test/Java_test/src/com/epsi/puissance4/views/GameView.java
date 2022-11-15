@@ -1,4 +1,4 @@
-package fr.groupe1C.puissance4.Java_test.src.com.epsi.puissance4.views;
+package main.java.fr.groupe1C.puissance4.Java_test.src.com.epsi.puissance4.views;
 
 import android.app.Activity;
 import android.content.Context;

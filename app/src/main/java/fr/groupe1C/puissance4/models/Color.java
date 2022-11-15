@@ -1,6 +1,5 @@
 package main.java.fr.groupe1C.puissance4;
 
-
 public enum Color {
     RED("#ff1400"),
     YELLOW("#ffe033"),
