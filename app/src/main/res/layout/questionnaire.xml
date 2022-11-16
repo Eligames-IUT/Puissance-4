@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:padding="8dp"
     android:layout_marginTop="200dip"
-    tools:context=".InterPage.Questionnaire">
+    tools:context=".views.Questionnaire">
 
 <!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
 <!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
@@ -31,7 +31,7 @@
         android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold"
-        tools:text="Ce jeu vous a-t-il plus ?" />
+        android:text="Ce jeu vous a-t-il plus ?" />
 
 
     <Button
@@ -43,7 +43,8 @@
         android:layout_weight="0"
         android:padding="16dp"
         android:textSize="20sp"
-        tools:text="OUI" />
+        android:textStyle="normal"
+        android:text="OUI" />
 
     <Button
         android:id="@+id/non"
@@ -54,7 +55,8 @@
         android:layout_weight="0"
         android:padding="16dp"
         android:textSize="20sp"
-        tools:text="NON" />
+        android:textStyle="normal"
+        android:text="NON" />
 
     <Button
         android:id="@+id/pas_avis1"
