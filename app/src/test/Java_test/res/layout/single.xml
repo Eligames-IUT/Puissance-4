@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="@drawable/wallpaper" android:weightSum="1"
+              android:id="@+id/layout"
+        >
+
+    <view android:layout_width="match_parent"
+          android:layout_height="310dp"
+          class="com.epsi.puissance4.views.GameView"
+          android:id="@+id/gameView"
+          android:layout_gravity="center_horizontal"
+            />
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:weightSum="1">
+    </LinearLayout>
+    <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Leave the game"
+            android:id="@+id/btnLeave" android:layout_weight="0.10" android:textSize="18dp"/>
+</LinearLayout>

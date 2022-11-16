@@ -2,12 +2,22 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:paddingLeft="10dp"
     android:paddingRight="10dp"
-    android:background="@color/white">
+    tools:context=".views.GameActivity">
 
     <TextView
-        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Puissance 4"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:layout_below="@id/eligames"/>
+
+    <TextView
+        android:id="@+id/eligames"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Eligames"
@@ -15,197 +25,219 @@
         android:textSize="@android:dimen/app_icon_size"
         android:layout_centerHorizontal="true"/>
 
-    <GridLayout
+    <LinearLayout
+        android:id="@+id/grille"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:rowCount="1"
-        android:columnCount="7">
+        android:orientation="horizontal">
 
-        <GridLayout
+        <LinearLayout
             android:id="@+id/colonne1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:rowCount="6"
-            android:columnCount="1">
+            android:orientation="vertical">
 
             <TextView
-                android:layout_width="30dp"
-                android:layout_height="30dp" />
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
             <TextView
-                android:layout_height="30dp"
-                android:layout_width="30dp" />
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
             <TextView
-                android:layout_width="30dp"
-                android:layout_height="30dp"/>
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
             <TextView
-                android:layout_width="30dp"
-                android:layout_height="30dp" />
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
             <TextView
-                android:layout_height="30dp"
-                android:layout_width="30dp" />
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
             <TextView
-                android:layout_height="30dp"
-                android:layout_width="30dp" />
-        </GridLayout>
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
+        </LinearLayout>
 
-        <GridLayout
+        <LinearLayout
             android:id="@+id/colonne2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:rowCount="6"
-            android:columnCount="1">
+            android:orientation="vertical">
             <TextView
-                android:layout_height="30dp"
-                android:layout_width="30dp" />
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
             <TextView
-                android:layout_height="30dp"
-                android:layout_width="30dp" />
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
             <TextView
-                android:layout_width="30dp"
-                android:layout_height="30dp"/>
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
             <TextView
-                android:layout_width="30dp"
-                android:layout_height="30dp" />
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
             <TextView
-                android:layout_height="30dp"
-                android:layout_width="30dp" />
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
             <TextView
-                android:layout_height="30dp"
-                android:layout_width="30dp" />
-        </GridLayout>
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
+        </LinearLayout>
 
-        <GridLayout
+        <LinearLayout
             android:id="@+id/colonne3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:rowCount="6"
-            android:columnCount="1">
+            android:orientation="vertical">
             <TextView
-                android:layout_height="30dp"
-                android:layout_width="30dp" />
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
             <TextView
-                android:layout_height="30dp"
-                android:layout_width="30dp" />
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
             <TextView
-                android:layout_width="30dp"
-                android:layout_height="30dp"/>
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
             <TextView
-                android:layout_width="30dp"
-                android:layout_height="30dp" />
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
             <TextView
-                android:layout_height="30dp"
-                android:layout_width="30dp" />
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
             <TextView
-                android:layout_height="30dp"
-                android:layout_width="30dp" />
-        </GridLayout>
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
+        </LinearLayout>
 
-        <GridLayout
+        <LinearLayout
             android:id="@+id/colonne4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:rowCount="6"
-            android:columnCount="1">
+            android:orientation="vertical">
             <TextView
-                android:layout_height="30dp"
-                android:layout_width="30dp" />
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
             <TextView
-                android:layout_height="30dp"
-                android:layout_width="30dp" />
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
             <TextView
-                android:layout_width="30dp"
-                android:layout_height="30dp"/>
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
             <TextView
-                android:layout_width="30dp"
-                android:layout_height="30dp" />
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
             <TextView
-                android:layout_height="30dp"
-                android:layout_width="30dp" />
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
             <TextView
-                android:layout_height="30dp"
-                android:layout_width="30dp" />
-        </GridLayout>
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
+        </LinearLayout>
 
-        <GridLayout
+        <LinearLayout
             android:id="@+id/colonne5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:rowCount="6"
-            android:columnCount="1">
+            android:orientation="vertical">
             <TextView
-                android:layout_height="30dp"
-                android:layout_width="30dp" />
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
             <TextView
-                android:layout_height="30dp"
-                android:layout_width="30dp" />
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
             <TextView
-                android:layout_width="30dp"
-                android:layout_height="30dp"/>
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
             <TextView
-                android:layout_width="30dp"
-                android:layout_height="30dp" />
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
             <TextView
-                android:layout_height="30dp"
-                android:layout_width="30dp" />
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
             <TextView
-                android:layout_height="30dp"
-                android:layout_width="30dp" />
-        </GridLayout>
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
+        </LinearLayout>
 
-        <GridLayout
+        <LinearLayout
             android:id="@+id/colonne6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:rowCount="6"
-            android:columnCount="1">
+            android:orientation="vertical">
             <TextView
-                android:layout_height="30dp"
-                android:layout_width="30dp" />
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
             <TextView
-                android:layout_height="30dp"
-                android:layout_width="30dp" />
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
             <TextView
-                android:layout_width="30dp"
-                android:layout_height="30dp"/>
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
             <TextView
-                android:layout_width="30dp"
-                android:layout_height="30dp" />
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
             <TextView
-                android:layout_height="30dp"
-                android:layout_width="30dp" />
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
             <TextView
-                android:layout_height="30dp"
-                android:layout_width="30dp" />
-        </GridLayout>
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
+        </LinearLayout>
 
-        <GridLayout
+        <LinearLayout
             android:id="@+id/colonne7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:rowCount="6"
-            android:columnCount="1">
+            android:orientation="vertical">
             <TextView
-                android:layout_height="30dp"
-                android:layout_width="30dp" />
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
             <TextView
-                android:layout_height="30dp"
-                android:layout_width="30dp" />
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
             <TextView
-                android:layout_width="30dp"
-                android:layout_height="30dp"/>
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
             <TextView
-                android:layout_width="30dp"
-                android:layout_height="30dp" />
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
             <TextView
-                android:layout_height="30dp"
-                android:layout_width="30dp" />
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
             <TextView
-                android:layout_height="30dp"
-                android:layout_width="30dp" />
-        </GridLayout>
-    </GridLayout>
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
+        </LinearLayout>
+    </LinearLayout>
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/grille"
+        android:layout_alignBottom="@id/grille"
+        android:src="@drawable/grille"
+        android:contentDescription="grille"/>
+
+    <TextView
+        android:id="@+id/j1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/grille"
+        android:layout_marginTop="@android:dimen/app_icon_size"
+        android:text="Joueur 1"
+        android:textSize="40sp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/j2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/j1"
+        android:layout_marginTop="@android:dimen/app_icon_size"
+        android:text="Joueur 2"
+        android:textSize="40sp"
+        android:textColor="@color/black"/>
 
 </RelativeLayout>
