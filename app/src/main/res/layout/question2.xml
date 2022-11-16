@@ -30,7 +30,7 @@
 
 
         <Button
-            android:id="@+id/oui1"
+            android:id="@+id/oui"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -41,7 +41,7 @@
             android:text="OUI"/>
 
         <Button
-            android:id="@+id/non2"
+            android:id="@+id/non"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"

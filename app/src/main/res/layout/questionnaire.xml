@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:padding="8dp"
     android:layout_marginTop="200dip"
-    tools:context=".InterPage.Question1">
+    tools:context=".InterPage.Questionnaire">
 
 <!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
 <!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
@@ -20,7 +20,7 @@
 
 
     <TextView
-        android:id="@+id/q1"
+        android:id="@+id/question"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
@@ -35,7 +35,7 @@
 
 
     <Button
-        android:id="@+id/oui1"
+        android:id="@+id/oui"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -46,7 +46,7 @@
         tools:text="OUI" />
 
     <Button
-        android:id="@+id/non1"
+        android:id="@+id/non"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
