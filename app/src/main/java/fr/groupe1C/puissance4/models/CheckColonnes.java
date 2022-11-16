@@ -211,15 +211,15 @@ public class CheckColonnes implements Cloneable{
      * méthode qui permet au joueur de chosisir une colonne
      * @param colonne
      */
-    public void choisirColonne(int colonne) {
+    public void choisirColonne(int[] colonne) {
         // le joueur clique sur la colonne qu'il veut jouer
         // on vérifie si la colonne est pleine
-        if(algorithme.colonnePleine(colonne)) {
+        if(AlgoGrille.colonnePleine(colonne)) {
             // on affiche un message d'erreur
         }
         else {
             // on joue le coup
-            algorithme.jouerColonne(colonne);
+            // jouerColonne(colonne);
         }
         
     }
@@ -228,9 +228,10 @@ public class CheckColonnes implements Cloneable{
    * méthode qui permet au joueur de jouer un tour
    * @param colonne
    */
-   public static void jouerColonne(int colonne) {
+  /* Désolée j'ai pas compris où tu veux en venir
+    public static void jouerColonne(int[] colonne) {
         // on parcourt les lignes de la colonne
-        for (int i = 0; i < Grille.grille.length; i++) {
+        for (int i = 0; i < Grille.getGrille.length; i++) {
             // si la case est vide
             if (Grille.grille[i][colonne] == 0) {
                 // on joue le coup
@@ -238,7 +239,7 @@ public class CheckColonnes implements Cloneable{
                 break;
             }
         }
-    }
+    }*/
 
     /**
     * 
@@ -247,6 +248,7 @@ public class CheckColonnes implements Cloneable{
     * @return la colonne ou le joueur doit jouer
     *
     */
+    /* Inutile pour l'instant il me semble
     public static int meilleurCoup(int[][] grille, int joueur) {
         int meilleurCoup = 0;
         int meilleurScore = Integer.MIN_VALUE; // on initialise le meilleur score à -infini
@@ -262,6 +264,6 @@ public class CheckColonnes implements Cloneable{
         }
         return meilleurCoup;
     }
-
+*/
     
 }

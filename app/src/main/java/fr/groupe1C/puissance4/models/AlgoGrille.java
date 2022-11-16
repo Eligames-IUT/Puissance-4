@@ -30,15 +30,14 @@ public class AlgoGrille {
    }
 
    /**
-    * 
-    * @param grille
+    *
     * @param colonne
     * @return l'existance d'un pion dans la première ligne de la colonne
     *
     */
-   public static boolean colonnePleine(int[][] grille, int colonne) {
+   public static boolean colonnePleine(int[] colonne) {
       boolean colonnePleine = false;
-      if (grille[0][colonne] != 0) { // si la colonne est pleine
+      if (colonne[colonne.length-1]==1){
          colonnePleine = true;
       }
       return colonnePleine;

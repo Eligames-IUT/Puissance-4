@@ -16,7 +16,7 @@ public class EcouteCLick extends MouseAdapter {
    Grille plateau;
    Joeur joueur;
 
-   public EcouteCLick(Grille plateau, Joeur joueur) {
+   public EcouteCLick(Grille plateau, Joueur joueur) {
       this.plateau = plateau;
       this.joueur = joueur;
    }
@@ -50,7 +50,7 @@ public class EcouteCLick extends MouseAdapter {
       repaint();
    }
 
-   
+
    /*
    // méthode qui écoute les events des clics sur les colonnes
    public void sourisCliquer(MouseEvent e) {
