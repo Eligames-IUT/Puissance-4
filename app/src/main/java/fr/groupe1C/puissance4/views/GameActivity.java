@@ -1,7 +1,10 @@
 package fr.groupe1C.puissance4.views;
 
+import android.support.annotation.ColorRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MotionEvent;
+import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -39,6 +42,14 @@ public class GameActivity extends AppCompatActivity {
         mColonne7 = findViewById(R.id.colonne7);
         mPlayer1 = findViewById(R.id.j1);
         mPlayer2 = findViewById(R.id.j2);
+
+
+        mColonne1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mColonne1.setBackgroundResource(R.color.rougef);
+            }
+        });
     }
 
     //getter des colonnes

@@ -1,29 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     android:paddingLeft="10dp"
     android:paddingRight="10dp"
+    android:background="@color/beige"
     tools:context=".views.GameActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
+        android:layout_below="@id/eligames"
         android:text="Puissance 4"
         android:textSize="25sp"
-        android:textColor="@color/black"
-        android:layout_below="@id/eligames"/>
+        android:textColor="@color/black" />
 
     <TextView
         android:id="@+id/eligames"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:text="Eligames"
         android:textColor="@color/black"
-        android:textSize="@android:dimen/app_icon_size"
-        android:layout_centerHorizontal="true"/>
+        android:textSize="@android:dimen/app_icon_size" />
 
     <LinearLayout
         android:id="@+id/grille"
@@ -37,7 +38,8 @@
             android:id="@+id/colonne1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:background="@color/beige">
 
             <TextView
                 android:layout_width="40dp"
@@ -47,7 +49,7 @@
                 android:layout_width="40dp" />
             <TextView
                 android:layout_width="40dp"
-                android:layout_height="40dp"/>
+                android:layout_height="40dp" />
             <TextView
                 android:layout_width="40dp"
                 android:layout_height="40dp" />
