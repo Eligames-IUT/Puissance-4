@@ -1,10 +1,9 @@
-package fr.groupe1C.puissance4.InterPage;
+package fr.groupe1C.puissance4.views;
 
-import android.support.v7.app.AppCompatActivity;
-import android.widget.Button;
-import android.view.View;
 import android.os.Bundle;
-import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import fr.groupe1C.puissance4.R;
