@@ -40,4 +40,10 @@ public class GameActivity extends AppCompatActivity {
         mPlayer1 = findViewById(R.id.j1);
         mPlayer2 = findViewById(R.id.j2);
     }
+
+    //getter des colonnes
+    public LinearLayout[] getColonnes(){
+        LinearLayout[] colonnes = {mColonne1, mColonne2, mColonne3, mColonne4, mColonne5, mColonne6, mColonne7};
+        return colonnes;
+    }
 }

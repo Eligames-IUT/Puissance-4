@@ -1,4 +1,4 @@
-package main.java.fr.groupe1C.puissance4;
+package fr.groupe1C.puissance4.models;
 
 /**
  * Created by Thomas on 21/04/2015.

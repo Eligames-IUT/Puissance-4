@@ -1,9 +1,11 @@
-package main.java.fr.groupe1C.puissance4;
+package fr.groupe1C.puissance4.models;
 
 import android.support.v7.app.AppCompatActivity;
 import android.widget.LinearLayout;
 import android.os.Bundle;
 import android.view.View;
+
+import fr.groupe1C.puissance4.views.GameActivity;
 
 public class Grille extends AppCompatActivity {
 
@@ -30,13 +32,8 @@ public class Grille extends AppCompatActivity {
         }
 
         // récupère l'élément XML corespondant à chaque colonne
-        viewCol[0] = findViewById(R.id.colonne1);
-        viewCol[1] = findViewById(R.id.colonne2);
-        viewCol[2] = findViewById(R.id.colonne3);
-        viewCol[3] = findViewById(R.id.colonne4);
-        viewCol[4] = findViewById(R.id.colonne5);
-        viewCol[5] = findViewById(R.id.colonne6);
-        viewCol[6] = findViewById(R.id.colonne7);
+        GameActivity view = new GameActivity();
+        this.viewCol= view.getColonnes();
 
         // Place un Listener sur chaque colonne
         for(int n = 0; n < colonne; n++) {
@@ -48,12 +45,6 @@ public class Grille extends AppCompatActivity {
     // getter de la grille
     public int[][] getGrille() {
         return grille;
-    }
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_game);
     }
 
 }

@@ -1,4 +1,4 @@
-package main.java.fr.groupe1C.puissance4;
+package fr.groupe1C.puissance4.models;
 
 public enum Color {
     RED("#ff1400"),
