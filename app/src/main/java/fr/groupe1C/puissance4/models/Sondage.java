@@ -77,7 +77,6 @@ public class Sondage {
         this.prochainJeux = prochainJeux;
         this.avecQui = avecQui;
         this.mode = mode;       
-
     }
     
 
