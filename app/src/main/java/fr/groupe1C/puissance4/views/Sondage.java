@@ -1,5 +1,11 @@
 package fr.groupe1C.puissance4.models;
 
+import java.beans.Statement;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class Sondage {
 
@@ -43,5 +49,27 @@ public class Sondage {
             e.printStackTrace();
         }
     }
+
+
+    // méthode qui permet de récupérer toutes les données de la table Sondage
+    public static ArrayList<Sondage> getAllSondage() {
+        Connection conn = connect();
+        ArrayList<Sondage> sondages = new ArrayList<Sondage>();
+        try {
+            PreparedStatement ps = conn.prepareStatement("SELECT * FROM Sondage");
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                Sondage sondage = new Sondage(rs.getInt("age"), rs.getString("sexe"), rs.getInt("nbParties"), rs.getBoolean("facililité"), rs.getString("statut"), rs.getString("matrimoniale"), rs.getString("prochainJeux"), rs.getString("avecQui"), rs.getBoolean("mode"));
+                sondages.add(sondage);
+            }
+            ps.close();
+            conn.close();
+        } catch (SQLException e) {
+            System.out.println("Erreur de récupération des données de la base de données");
+            e.printStackTrace();
+        }
+        return sondages;
+    }
+
 
 }
