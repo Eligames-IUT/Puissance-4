@@ -34,10 +34,13 @@ public class Grille extends AppCompatActivity {
     public int[][] getGrille(){
         return this.grille;
     }
-/*
-    public Colonne getColonne(int colonne){
-        return this.colonnes[colonne];
-    }*/
 
+    public Colonne getColonne(int colonne) {
+        return this.colonnes[colonne];
+    }
+
+    public Colonne[] getColonnes(){
+        return colonnes;
+    }
 
 }
