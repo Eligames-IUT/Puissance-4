@@ -35,6 +35,8 @@ public class ListenerCol extends Activity implements OnClickListener {
     @Override
     public void onClick(View v) {
 
+        etatJoueur.switchJoueur();
+
         int line = this.grille.getLowestJeton(this.colonne);
         if (this.etatJoueur.getJoueur()==1) {
             if (line == 0) {
