@@ -3,7 +3,6 @@ package fr.groupe1C.puissance4.models;
 // import java.util.ArrayList;
 import java.util.List;
 import java.util.ArrayList;
-import java.beans.Statement;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -185,13 +184,13 @@ public class Sondage {
         System.out.println("Pourcentage de personnes qui ont trouvé le jeu facile : " + facililité / sondages.size() * 100 + "%");
         System.out.println("Pourcentage de personnes qui ont joué en mode 2 joueurs : " + mode / sondages.size() * 100 + "%");
     }
-
+/**
     // main pour insérer des données dans la base de données
     public static void main(String[] args) {
         insertSondage(18, "Homme", 10, true, "Etudiant", "Célibataire", "Puissance 4", "Seul", true);
         insertSondage(25, "Homme", 100, true, "Etudiant", "Célibataire", "Puissance 4", "Seul", true);
         insertSondage(30, "Homme", 1000, true, "Etudiant", "Célibataire", "Puissance 4", "Seul", true);
     }
-
+*/
 
 }
