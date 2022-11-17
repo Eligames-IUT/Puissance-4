@@ -35,12 +35,19 @@ public class Grille extends AppCompatActivity {
         return this.grille;
     }
 
-    public Colonne getColonne(int colonne) {
-        return this.colonnes[colonne];
+    // getter de la colonne
+    public Colonne getColonne(){
+        return this.colonnes;
     }
 
-    public Colonne[] getColonnes(){
-        return colonnes;
+    // setter de la grille
+    public void setGrille(int ligne, int colonne, int pion){
+        this.grille[ligne][colonne] = pion;
+    }
+
+    // setter de la colonne
+    public void setColonne(int colonne, int ligne, int pion){
+        this.colonnes[colonne].setPion(ligne, pion);
     }
 
 }

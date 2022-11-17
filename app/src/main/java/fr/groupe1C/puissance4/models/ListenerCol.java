@@ -19,9 +19,9 @@ public class ListenerCol extends Activity implements OnClickListener {
     private TextView mCase5;
     private TextView mCase6;
 
-    public ListenerCol(Grille grille, int col, TextView mCase1, TextView mCase2, TextView mCase3, TextView mCase4, TextView mCase5, TextView mCase6){
+    public ListenerCol(Grille grille, Colonne colonne, TextView mCase1, TextView mCase2, TextView mCase3, TextView mCase4, TextView mCase5, TextView mCase6) {
         this.grille = grille;
-        //this.colonne = grille.getColonne(col);
+        this.colonne = colonne;
         this.mCase1 = mCase1;
         this.mCase2 = mCase2;
         this.mCase3 = mCase3;
@@ -29,7 +29,6 @@ public class ListenerCol extends Activity implements OnClickListener {
         this.mCase5 = mCase5;
         this.mCase6 = mCase6;
     }
-
 
     @Override
     public void onClick(View v) {
