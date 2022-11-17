@@ -71,5 +71,28 @@ public class Sondage {
         return sondages;
     }
 
+    // méthode qui permet de faire des moyennes sur les données de la table Sondage qu'on a récupéré avec getAllSondage() en se connectant à la base de données
+    public static void moyenne() {
+        ArrayList<Sondage> sondages = getAllSondage();
+        int age = 0;
+        int nbParties = 0;
+        int facililité = 0;
+        int mode = 0;
+        for (Sondage sondage : sondages) {
+            age += sondage.getAge();
+            nbParties += sondage.getNbParties();
+            if (sondage.getFacililité()) {
+                facililité++;
+            }
+            if (sondage.getMode()) {
+                mode++;
+            }
+        }
+        System.out.println("Moyenne d'age : " + age / sondages.size());
+        System.out.println("Moyenne de parties jouées : " + nbParties / sondages.size());
+        System.out.println("Pourcentage de personnes qui ont trouvé le jeu facile : " + facililité / sondages.size() * 100 + "%");
+        System.out.println("Pourcentage de personnes qui ont joué en mode 2 joueurs : " + mode / sondages.size() * 100 + "%");
+    }
+    
 
 }
