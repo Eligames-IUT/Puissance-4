@@ -1,5 +1,8 @@
 package fr.groupe1C.puissance4.models;
 
+// import java.util.ArrayList;
+import java.util.List;
+import java.util.ArrayList;
 import java.beans.Statement;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -8,6 +11,75 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class Sondage {
+
+    private int age;
+    private String sexe;
+    private int nbParties;
+    private boolean facililité;
+    private String statut;
+    private String matrimoniale;
+    private String prochainJeux;
+    private String avecQui;
+    private Boolean mode;
+
+    // getter age
+    public int getAge() {
+        return age;
+    }
+
+    // getter nbParties
+    public int getNbParties() {
+        return nbParties;
+    }
+
+    // getter facililité
+    public boolean getFacililité() {
+        return facililité;
+    }
+
+    // getter statut
+    public String getStatut() {
+        return statut;
+    }
+
+    // getter matrimoniale
+    public String getMatrimoniale() {
+        return matrimoniale;
+    }
+
+    // getter prochainJeux
+    public String getProchainJeux() {
+        return prochainJeux;
+    }
+
+    // getter avecQui
+    public String getAvecQui() {
+        return avecQui;
+    }
+
+    // getter mode
+    public Boolean getMode() {
+        return mode;
+    }
+
+    // getter sexe
+    public String getSexe() {
+        return sexe;
+    }
+
+    public Sondage(int age, String sexe, int nbParties, Boolean facililité, String statut, String matrimoniale, String prochainJeux, String avecQui, Boolean mode) {
+        this.age = age;
+        this.sexe = sexe;
+        this.nbParties = nbParties;
+        this.facililité = facililité;
+        this.statut = statut;
+        this.matrimoniale = matrimoniale;
+        this.prochainJeux = prochainJeux;
+        this.avecQui = avecQui;
+        this.mode = mode;       
+
+    }
+    
 
     /**
      * 
@@ -77,8 +149,7 @@ public class Sondage {
             PreparedStatement ps = conn.prepareStatement("SELECT * FROM repSondage");
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                Sondage sondage = new Sondage(rs.getInt("age"), rs.getString("sexe"), rs.getInt("nbParties"), rs.getBoolean("facililité"), rs.getString("statut"), rs.getString("matrimoniale"), rs.getString("prochainJeux"), rs.getString("avecQui"), rs.getBoolean("mode"));
-                sondages.add(sondage);
+                sondages.add(new Sondage(rs.getInt("age"), rs.getString("sexe"), rs.getInt("nbParties"), rs.getBoolean("facililité"), rs.getString("statut"), rs.getString("matrimoniale"), rs.getString("prochainJeux"), rs.getString("avecQui"), rs.getBoolean("mode")));
             }
             ps.close();
             conn.close();
@@ -115,6 +186,13 @@ public class Sondage {
         System.out.println("Pourcentage de personnes qui ont trouvé le jeu facile : " + facililité / sondages.size() * 100 + "%");
         System.out.println("Pourcentage de personnes qui ont joué en mode 2 joueurs : " + mode / sondages.size() * 100 + "%");
     }
-    
+
+    // main pour insérer des données dans la base de données
+    public static void main(String[] args) {
+        insertSondage(18, "Homme", 10, true, "Etudiant", "Célibataire", "Puissance 4", "Seul", true);
+        insertSondage(25, "Homme", 100, true, "Etudiant", "Célibataire", "Puissance 4", "Seul", true);
+        insertSondage(30, "Homme", 1000, true, "Etudiant", "Célibataire", "Puissance 4", "Seul", true);
+    }
+
 
 }
