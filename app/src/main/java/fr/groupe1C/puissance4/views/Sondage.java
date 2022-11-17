@@ -27,11 +27,24 @@ public class Sondage {
         }
     }
 
-    // méthode qui permet d'insérer dans la table Sondage les données du sondage
-    public static void insertSondage(int age, String sexe, int nbParties, Boolean facililité, String statut, String matrimoniale, String prochainJeux, String avecQui, Boolean mode) {
+    /**
+     * @author Julien Charbonnel
+     * @version 1.0
+     * @param age
+     * @param sexe
+     * @param nbParties
+     * @param facililité
+     * @param statut
+     * @param matrimoniale
+     * @param prochainJeux
+     * @param avecQui
+     * @param mode
+     * @return true si l'insertion a réussi et false sinon
+     */
+    public static boolean insertSondage(int age, String sexe, int nbParties, Boolean facililité, String statut, String matrimoniale, String prochainJeux, String avecQui, Boolean mode) {
         Connection conn = connect();
         try {
-            PreparedStatement ps = conn.prepareStatement("INSERT INTO Sondage VALUES (?,?,?,?,?,?,?,?,?)");
+            PreparedStatement ps = conn.prepareStatement("INSERT INTO repSondage VALUES (?,?,?,?,?,?,?,?,?)");
             ps.setInt(1, age);
             ps.setString(2, sexe);
             ps.setInt(3, nbParties);
@@ -44,19 +57,24 @@ public class Sondage {
             ps.executeUpdate();
             ps.close();
             conn.close();
+            return true;
         } catch (SQLException e) {
             System.out.println("Erreur d'insertion dans la base de données");
             e.printStackTrace();
+            return false;
         }
     }
 
-
-    // méthode qui permet de récupérer toutes les données de la table Sondage
+    /**
+     * @author Julien Charbonnel
+     * @version 1.0
+     * @return les informations du sondage
+    */
     public static ArrayList<Sondage> getAllSondage() {
         Connection conn = connect();
         ArrayList<Sondage> sondages = new ArrayList<Sondage>();
         try {
-            PreparedStatement ps = conn.prepareStatement("SELECT * FROM Sondage");
+            PreparedStatement ps = conn.prepareStatement("SELECT * FROM repSondage");
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 Sondage sondage = new Sondage(rs.getInt("age"), rs.getString("sexe"), rs.getInt("nbParties"), rs.getBoolean("facililité"), rs.getString("statut"), rs.getString("matrimoniale"), rs.getString("prochainJeux"), rs.getString("avecQui"), rs.getBoolean("mode"));
@@ -71,7 +89,11 @@ public class Sondage {
         return sondages;
     }
 
-    // méthode qui permet de faire des moyennes sur les données de la table Sondage qu'on a récupéré avec getAllSondage() en se connectant à la base de données
+    /**
+     * @author Julien Charbonnel
+     * @version 1.0
+     * 
+     */
     public static void moyenne() {
         ArrayList<Sondage> sondages = getAllSondage();
         int age = 0;
