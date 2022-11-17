@@ -12,21 +12,18 @@ public class Grille extends AppCompatActivity {
     private int ligne;
     private int colonne;
     private int[][] grille;
-    private Colonne[] colonnes;
 
 
     public Grille(int ligne,int colonne) {
         this.ligne=ligne;
         this.colonne=colonne;
         this.grille = new int[ligne][colonne];
-        this.colonnes = new Colonne[colonne];
 
         // Initialise la grille vide
         for(int i = 0; i < ligne; i++) {
             for (int j = 0; j < colonne; j++) {
                 grille[i][j] = 0;
             }
-            this.colonnes[i] = new Colonne(ligne);
         }
     }
 
@@ -36,18 +33,22 @@ public class Grille extends AppCompatActivity {
     }
 
     // getter de la colonne
-    public Colonne getColonne(){
-        return this.colonnes;
-    }
 
     // setter de la grille
     public void setGrille(int ligne, int colonne, int pion){
         this.grille[ligne][colonne] = pion;
     }
-
-    // setter de la colonne
-    public void setColonne(int colonne, int ligne, int pion){
-        this.colonnes[colonne].setPion(ligne, pion);
+    public int getLowestJeton(int colonne){
+        int i;
+        for(i = 0; i<6; i++ ){
+            if(this.grille[i][colonne]==0){
+                break; //On sort de la boucle une fois le premier jeton vide atteint
+            }
+        }
+        return i;
     }
+
+
+
 
 }

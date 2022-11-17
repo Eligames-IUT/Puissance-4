@@ -3,6 +3,7 @@ package fr.groupe1C.puissance4.views;
 import android.support.annotation.ColorRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -12,6 +13,7 @@ import org.w3c.dom.Text;
 
 import fr.groupe1C.puissance4.R;
 import fr.groupe1C.puissance4.models.Grille;
+import fr.groupe1C.puissance4.models.Joueur;
 import fr.groupe1C.puissance4.models.ListenerCol;
 
 public class GameActivity extends AppCompatActivity {
@@ -76,10 +78,6 @@ public class GameActivity extends AppCompatActivity {
     private TextView mPlayer1;
     private TextView mPlayer2;
 
-    public void main(String args[]){
-        this.grille = new Grille(6,7);
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -143,14 +141,18 @@ public class GameActivity extends AppCompatActivity {
         mPlayer1 = findViewById(R.id.j1);
         mPlayer2 = findViewById(R.id.j2);
 
+        this.grille = new Grille(6,7);
 
-        mColonne1.setOnClickListener(new ListenerCol(this.grille,1, mCase1, mCase8, mCase15, mCase22, mCase29, mCase36));
-        mColonne2.setOnClickListener(new ListenerCol(this.grille, 2, mCase2, mCase9, mCase16, mCase23, mCase30, mCase37));
-        mColonne3.setOnClickListener(new ListenerCol(this.grille, 3, mCase3, mCase10, mCase17, mCase24, mCase31, mCase38));
-        mColonne4.setOnClickListener(new ListenerCol(this.grille, 4, mCase4, mCase11, mCase18, mCase25, mCase32, mCase39));
-        mColonne5.setOnClickListener(new ListenerCol(this.grille, 5, mCase5, mCase12, mCase19, mCase26, mCase33, mCase40));
-        mColonne6.setOnClickListener(new ListenerCol(this.grille,6, mCase6, mCase13, mCase20, mCase27, mCase34, mCase41));
-        mColonne7.setOnClickListener(new ListenerCol(this.grille, 7, mCase7, mCase14, mCase21, mCase28, mCase35, mCase42));
+        Joueur etatJoueur = new Joueur();
+        mGrille.setOnClickListener(etatJoueur);
 
+        mColonne1.setOnClickListener(new ListenerCol(this.grille, etatJoueur, 1, mCase1, mCase8, mCase15, mCase22, mCase29, mCase36));
+        mColonne2.setOnClickListener(new ListenerCol(this.grille, etatJoueur,2, mCase2, mCase9, mCase16, mCase23, mCase30, mCase37));
+        mColonne3.setOnClickListener(new ListenerCol(this.grille, etatJoueur,3, mCase3, mCase10, mCase17, mCase24, mCase31, mCase38));
+        mColonne4.setOnClickListener(new ListenerCol(this.grille, etatJoueur,4, mCase4, mCase11, mCase18, mCase25, mCase32, mCase39));
+        mColonne5.setOnClickListener(new ListenerCol(this.grille, etatJoueur,5, mCase5, mCase12, mCase19, mCase26, mCase33, mCase40));
+        mColonne6.setOnClickListener(new ListenerCol(this.grille, etatJoueur, 6, mCase6, mCase13, mCase20, mCase27, mCase34, mCase41));
+        mColonne7.setOnClickListener(new ListenerCol(this.grille, etatJoueur,7, mCase7, mCase14, mCase21, mCase28, mCase35, mCase42));
+        Log.e("", this.grille.toString());
     }
 }
