@@ -22,7 +22,7 @@ public class Questionnaire extends AppCompatActivity implements  View.OnClickLis
     private Button oui2;
     private Button non2;
 
-    private int nb_question,note;
+    private int nb_question;
 
 
    @Override
@@ -33,21 +33,20 @@ public class Questionnaire extends AppCompatActivity implements  View.OnClickLis
 
         tv = findViewById(R.id.question);
 
-        nb_question = 10;
-        note = 10;
+        nb_question = 11;
 
         question = new String[nb_question];
 
-        question[0] = "RATIO0";
-        question[1] = "RATIO1";
-        question[2] = "RATIO2";
-        question[3] = "RATIO3";
-        question[4] = "RATIO4";
-        question[5] = "RATIO5";
-        question[6] = "RATIO6";
-        question[7] = "RATIO7";
-        question[8] = "RATIO8";
-        question[9] = "RATIO9";
+        question[0] = "Voulez-vous répondre à un sondage rapide ? (2min)";
+        question[1] = "Quel est votre age ?";
+        question[2] = "Quel est votre sexe ?";
+        question[3] = "Combien de partie(s) avez-vous joué ?";
+        question[4] = "Trouvez-vous le jeu facile d'utilisation ?";
+        question[5] = "Quel est votre statut ?";
+        question[6] = "Quel est votre situation patrimoniale ?";
+        question[7] = "Quels jeux aimeriez-vous voir prochainement ?";
+        question[8] = "Avec qui jouez-vous ?";
+        question[9] = "Aimeriez-vous un mode 3 joueurs ?";
 
 
         oui = new Button[nb_question];
@@ -74,33 +73,29 @@ public class Questionnaire extends AppCompatActivity implements  View.OnClickLis
             startActivity(gameActivityIntent);
         }
 
-        for(int i = 0; i < nb_question; i++){
+            for(int i = 0; i < nb_question; i++){
 
-            if(i == 9){
-                tv.setText("NOTE :" + note);
-            }
-            if (v.equals(this.oui[i]) || v.equals(this.non[i])){
-
-                if(v.equals(this.non[i])){
-                    if(note > 0){
-                        note--;
-                    }
+                if(i == 0){
+                    pas_avis.setVisibility(View.INVISIBLE);
                 }
 
+                if (v.equals(this.oui[i]) || v.equals(this.non[i])){
 
-                this.oui[i] = null;
-                this.non[i] = null;
+                    this.oui[i] = null;
+                    this.non[i] = null;
 
-                this.oui[i+1] = findViewById(R.id.oui);
-                this.non[i+1] = findViewById(R.id.non);
+                    this.oui[i+1] = findViewById(R.id.oui);
+                    this.non[i+1] = findViewById(R.id.non);
 
-                this.oui[i+1].setOnClickListener(this);
-                this.non[i+1].setOnClickListener(this);
+                    this.oui[i+1].setOnClickListener(this);
+                    this.non[i+1].setOnClickListener(this);
 
-                tv.setText(question[i]);
-                break;
+                    tv.setText(question[i]);
+                    break;
+                }
             }
-        }
+
+
    }
 }
 
