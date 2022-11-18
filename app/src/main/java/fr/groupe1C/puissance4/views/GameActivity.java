@@ -143,7 +143,7 @@ public class GameActivity extends AppCompatActivity {
 
         this.grille = new Grille(6,7);
 
-        Joueur etatJoueur = new Joueur();
+        Joueur etatJoueur = new Joueur(mPlayer1, mPlayer2);
 
         mColonne1.setOnClickListener(new ListenerCol(this.grille, etatJoueur, 1, mCase1, mCase8, mCase15, mCase22, mCase29, mCase36));
         mColonne2.setOnClickListener(new ListenerCol(this.grille, etatJoueur,2, mCase2, mCase9, mCase16, mCase23, mCase30, mCase37));

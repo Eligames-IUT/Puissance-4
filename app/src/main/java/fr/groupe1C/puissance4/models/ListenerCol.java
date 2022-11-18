@@ -35,57 +35,51 @@ public class ListenerCol extends Activity implements OnClickListener {
     @Override
     public void onClick(View v) {
 
-        etatJoueur.switchJoueur();
-
         int line = this.grille.getLowestJeton(this.colonne);
         if (this.etatJoueur.getJoueur()==1) {
             if (line == 0) {
-                this.mCase6.setBackgroundResource(R.color.jaune);
+                this.mCase6.setBackgroundResource(R.color.p1);
                 this.grille.setGrille(line, this.colonne, 1);
             } else if (line == 1) {
-                this.mCase5.setBackgroundResource(R.color.jaune);
+                this.mCase5.setBackgroundResource(R.color.p1);
                 this.grille.setGrille(line, this.colonne, 1);
             } else if (line == 2) {
-                this.mCase4.setBackgroundResource(R.color.jaune);
+                this.mCase4.setBackgroundResource(R.color.p1);
                 this.grille.setGrille(line, this.colonne, 1);
             } else if (line == 3) {
-                this.mCase3.setBackgroundResource(R.color.jaune);
+                this.mCase3.setBackgroundResource(R.color.p1);
                 this.grille.setGrille(line, this.colonne, 1);
             } else if (line == 4) {
-                this.mCase2.setBackgroundResource(R.color.jaune);
+                this.mCase2.setBackgroundResource(R.color.p1);
                 this.grille.setGrille(line, this.colonne, 1);
             } else if (line == 5) {
-                this.mCase1.setBackgroundResource(R.color.jaune);
+                this.mCase1.setBackgroundResource(R.color.p1);
                 this.grille.setGrille(line, this.colonne, 1);
             }
         } else if (this.etatJoueur.getJoueur()==2) {
             if (line == 0) {
-                this.mCase6.setBackgroundResource(R.color.rougef);
+                this.mCase6.setBackgroundResource(R.color.p2);
                 this.grille.setGrille(line, this.colonne, 2);
             } else if (line == 1) {
-                this.mCase5.setBackgroundResource(R.color.rougef);
+                this.mCase5.setBackgroundResource(R.color.p2);
                 this.grille.setGrille(line, this.colonne, 2);
             } else if (line == 2) {
-                this.mCase4.setBackgroundResource(R.color.rougef);
+                this.mCase4.setBackgroundResource(R.color.p2);
                 this.grille.setGrille(line, this.colonne, 2);
             } else if (line == 3) {
-                this.mCase3.setBackgroundResource(R.color.rougef);
+                this.mCase3.setBackgroundResource(R.color.p2);
                 this.grille.setGrille(line, this.colonne, 2);
             } else if (line == 4) {
-                this.mCase2.setBackgroundResource(R.color.rougef);
+                this.mCase2.setBackgroundResource(R.color.p2);
                 this.grille.setGrille(line, this.colonne, 2);
             } else if (line == 5) {
-                this.mCase1.setBackgroundResource(R.color.rougef);
+                this.mCase1.setBackgroundResource(R.color.p2);
                 this.grille.setGrille(line, this.colonne, 2);
             }
+
         }
 
-
-
-       /**this.mCase6.setBackgroundResource(R.color.jaune);
-        //this.grille.setGrille(5,0,1);
-
-        //this.mCase6.setBackgroundResource(R.color.jaune);**/
+        etatJoueur.switchJoueur();
 
     }
 }
