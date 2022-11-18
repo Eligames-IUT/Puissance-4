@@ -1,5 +1,7 @@
 package fr.groupe1C.puissance4.models;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.view.View.OnClickListener;
 import android.app.Activity;
@@ -10,6 +12,8 @@ import android.widget.TextView;
 import fr.groupe1C.puissance4.R;
 import fr.groupe1C.puissance4.views.GameActivity;
 import fr.groupe1C.puissance4.views.MainActivity;
+import fr.groupe1C.puissance4.views.Questionnaire;
+
 import android.content.Intent;
 
 public class ListenerCol extends Activity implements OnClickListener {
@@ -23,6 +27,7 @@ public class ListenerCol extends Activity implements OnClickListener {
     private TextView mCase5;
     private TextView mCase6;
     private Joueur etatJoueur;
+
 
     public ListenerCol(Grille grille, Joueur etatJoueur, int colonne, TextView mCase1, TextView mCase2, TextView mCase3, TextView mCase4, TextView mCase5, TextView mCase6) {
         this.grille = grille;
@@ -86,12 +91,34 @@ public class ListenerCol extends Activity implements OnClickListener {
         Victoire vic = new Victoire(this.grille.getGrille());
         if (vic.Result()==1){
             //pop up victoire j1 ok vers sondage
-            Intent intent = new Intent(this ,MainActivity.class);
-            startActivity(intent);
+            /*AlertDialog.Builder builder = new AlertDialog.Builder(ListenerCol.this);
+
+            builder.setTitle("Victoire !")
+                    .setMessage("Le joueur 1 à gagné.")
+                    .setPositiveButton("CONTINUER", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            Intent intent = new Intent(ListenerCol.this, Questionnaire.class);
+                            startActivity(intent);
+                        }
+                    })
+                    .create()
+                    .show();*/
         } else if (vic.Result()==2){
             // pop up victoire j2 ok vers sondage
-            Intent intent = new Intent(this ,MainActivity.class);
-            startActivity(intent);
+            /*AlertDialog.Builder builder = new AlertDialog.Builder(ListenerCol.this);
+
+            builder.setTitle("Victoire !")
+                    .setMessage("Le joueur 2 à gagné.")
+                    .setPositiveButton("CONTINUER", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            Intent intent = new Intent(ListenerCol.this, Questionnaire.class);
+                            startActivity(intent);
+                        }
+                    })
+                    .create()
+                    .show();*/
         }
 
 

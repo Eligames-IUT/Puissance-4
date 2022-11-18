@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:layout_marginTop="50dip"
+    tools:context=".views.Questionnaire">
+
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:padding="10dp"
+        android:layout_weight="0"
+        android:background="@color/teal_700"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="Ce jeu vous a-t-il plus ?" />
+
+    <EditText
+        android:id="@+id/input"
+
+        android:layout_width="match_parent"
+        android:layout_height="90sp"
+        android:gravity="center"
+
+        android:inputType="text" />
+
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:layout_weight="0"
+        android:padding="16dp"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        android:text="OUI" />
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="8dp"
+        android:layout_weight="0"
+        android:padding="16dp"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        android:text="NON" />
+
+    <Button
+        android:id="@+id/btn3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="8dp"
+        android:layout_weight="0"
+        android:padding="16dp"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        android:text="" />
+    <Button
+        android:id="@+id/btn4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="8dp"
+        android:layout_weight="0"
+        android:padding="16dp"
+        android:textSize="10sp"
+        android:textStyle="normal"
+        android:text="Je ne souhaite pas répondre" />
+
+</LinearLayout>
+
+
