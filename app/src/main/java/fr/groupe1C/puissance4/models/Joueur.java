@@ -19,7 +19,7 @@ public class Joueur {
         this.joueur = 1;
         this.mPlayer1 = mPlayer1;
         this.mPlayer2 =  mPlayer2;
-        this.mPlayer1.setBackgroundResource(R.color.p1);
+        this.mPlayer1.setBackgroundResource(R.drawable.p1_round);
     }
 
     public int getJoueur(){
@@ -29,12 +29,12 @@ public class Joueur {
     public void switchJoueur() {
         if (this.joueur==1){
             this.joueur=2;
-            this.mPlayer2.setBackgroundResource(R.color.p2);
-            this.mPlayer1.setBackgroundResource(R.color.beige);
+            this.mPlayer2.setBackgroundResource(R.drawable.p2_round);
+            this.mPlayer1.setBackgroundResource(R.color.light_grey);
         } else {
             this.joueur=1;
-            this.mPlayer1.setBackgroundResource(R.color.p1);
-            this.mPlayer2.setBackgroundResource(R.color.beige);
+            this.mPlayer1.setBackgroundResource(R.drawable.p1_round);
+            this.mPlayer2.setBackgroundResource(R.color.light_grey);
         }
     }
 
