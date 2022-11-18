@@ -1,5 +1,6 @@
 package fr.groupe1C.puissance4.models;
 
+import android.content.Intent;
 import android.view.View.OnClickListener;
 import android.app.Activity;
 import android.view.View;
@@ -7,6 +8,9 @@ import android.util.Log;
 import android.widget.TextView;
 
 import fr.groupe1C.puissance4.R;
+import fr.groupe1C.puissance4.views.GameActivity;
+import fr.groupe1C.puissance4.views.MainActivity;
+import android.content.Intent;
 
 public class ListenerCol extends Activity implements OnClickListener {
 
@@ -79,7 +83,38 @@ public class ListenerCol extends Activity implements OnClickListener {
 
         }
 
-        etatJoueur.switchJoueur();
+        Victoire vic = new Victoire(this.grille.getGrille());
+        if (vic.Result()==1){
+            //pop up victoire j1 ok vers sondage
+            Intent intent = new Intent(this ,MainActivity.class);
+            startActivity(intent);
+        } else if (vic.Result()==2){
+            // pop up victoire j2 ok vers sondage
+            Intent intent = new Intent(this ,MainActivity.class);
+            startActivity(intent);
+        }
+
+
+
+        // Teste si le pion rend la grille pleine
+        int pionInGrille = 0;
+
+        for (int i=0; i<6; i++){
+            for (int j=0; j<7; j++){
+                if (this.grille.getGrille()[i][j]!=0){
+                    pionInGrille+=1;
+                }
+            }
+        }
+        // Met fin à la partie si la grille est pleine
+        if(pionInGrille==6*7){
+            // pop up match nul, ok vers sondage
+        }
+
+
+        if (line<6) {
+            etatJoueur.switchJoueur();
+        }
 
     }
 }
