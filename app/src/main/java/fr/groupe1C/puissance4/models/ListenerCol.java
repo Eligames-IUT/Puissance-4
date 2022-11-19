@@ -7,6 +7,7 @@ import android.view.View.OnClickListener;
 import android.app.Activity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import fr.groupe1C.puissance4.R;
@@ -122,6 +123,9 @@ public class ListenerCol extends Activity implements OnClickListener {
             TextView mBas = this.etatJoueur.getmPlayer(2);
             mHaut.setText(" Victoire ! ");
             mBas.setTextSize((float) 30);
+            RelativeLayout.LayoutParams lp = (RelativeLayout.LayoutParams) mBas.getLayoutParams();
+            lp.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, 0);
+            mBas.setLayoutParams(lp);
             this.mQuest.setVisibility(View.VISIBLE);
             mBas.setText(" Joueur "+resultat+" l'emporte ");
             if (resultat==1) {
