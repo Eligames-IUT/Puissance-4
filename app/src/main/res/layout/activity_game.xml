@@ -30,239 +30,290 @@
 
     <LinearLayout
         android:id="@+id/grille"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/subtitle"
-        android:layout_marginVertical="30dp"
+        android:layout_alignTop="@id/imgGrille"
+        android:layout_alignBottom="@id/imgGrille"
         android:orientation="horizontal">
 
         <LinearLayout
             android:id="@+id/colonne1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/case1"
-                android:layout_width="50dp"
-                android:layout_height="50dp" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
             <TextView
                 android:id="@+id/case8"
-                android:layout_height="50dp"
-                android:layout_width="50dp" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
             <TextView
                 android:id="@+id/case15"
-                android:layout_width="50dp"
-                android:layout_height="50dp" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
             <TextView
                 android:id="@+id/case22"
-                android:layout_width="50dp"
-                android:layout_height="50dp" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
             <TextView
                 android:id="@+id/case29"
-                android:layout_height="50dp"
-                android:layout_width="50dp" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
             <TextView
                 android:id="@+id/case36"
-                android:layout_height="50dp"
-                android:layout_width="50dp" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/colonne2"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
             android:orientation="vertical">
             <TextView
                 android:id="@+id/case2"
-                android:layout_height="50dp"
-                android:layout_width="50dp" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
             <TextView
                 android:id="@+id/case9"
-                android:layout_height="50dp"
-                android:layout_width="50dp" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
             <TextView
                 android:id="@+id/case16"
-                android:layout_width="50dp"
-                android:layout_height="50dp"/>
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
             <TextView
                 android:id="@+id/case23"
-                android:layout_width="50dp"
-                android:layout_height="50dp" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
             <TextView
                 android:id="@+id/case30"
-                android:layout_height="50dp"
-                android:layout_width="50dp" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
             <TextView
                 android:id="@+id/case37"
-                android:layout_height="50dp"
-                android:layout_width="50dp" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/colonne3"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
             android:orientation="vertical">
             <TextView
                 android:id="@+id/case3"
-                android:layout_height="50dp"
-                android:layout_width="50dp" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
             <TextView
                 android:id="@+id/case10"
-                android:layout_height="50dp"
-                android:layout_width="50dp" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
             <TextView
                 android:id="@+id/case17"
-                android:layout_width="50dp"
-                android:layout_height="50dp"/>
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
             <TextView
                 android:id="@+id/case24"
-                android:layout_width="50dp"
-                android:layout_height="50dp" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
             <TextView
                 android:id="@+id/case31"
-                android:layout_height="50dp"
-                android:layout_width="50dp" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
             <TextView
                 android:id="@+id/case38"
-                android:layout_height="50dp"
-                android:layout_width="50dp" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/colonne4"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
             android:orientation="vertical">
             <TextView
                 android:id="@+id/case4"
-                android:layout_height="50dp"
-                android:layout_width="50dp" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
             <TextView
                 android:id="@+id/case11"
-                android:layout_height="50dp"
-                android:layout_width="50dp" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
             <TextView
                 android:id="@+id/case18"
-                android:layout_width="50dp"
-                android:layout_height="50dp"/>
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
             <TextView
                 android:id="@+id/case25"
-                android:layout_width="50dp"
-                android:layout_height="50dp" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
             <TextView
                 android:id="@+id/case32"
-                android:layout_height="50dp"
-                android:layout_width="50dp" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
             <TextView
                 android:id="@+id/case39"
-                android:layout_height="50dp"
-                android:layout_width="50dp" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/colonne5"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
             android:orientation="vertical">
             <TextView
                 android:id="@+id/case5"
-                android:layout_height="50dp"
-                android:layout_width="50dp" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
             <TextView
                 android:id="@+id/case12"
-                android:layout_height="50dp"
-                android:layout_width="50dp" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
             <TextView
                 android:id="@+id/case19"
-                android:layout_width="50dp"
-                android:layout_height="50dp"/>
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
             <TextView
                 android:id="@+id/case26"
-                android:layout_width="50dp"
-                android:layout_height="50dp" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
             <TextView
                 android:id="@+id/case33"
-                android:layout_height="50dp"
-                android:layout_width="50dp" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
             <TextView
                 android:id="@+id/case40"
-                android:layout_height="50dp"
-                android:layout_width="50dp" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/colonne6"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
             android:orientation="vertical">
             <TextView
                 android:id="@+id/case6"
-                android:layout_height="50dp"
-                android:layout_width="50dp" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
             <TextView
                 android:id="@+id/case13"
-                android:layout_height="50dp"
-                android:layout_width="50dp" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
             <TextView
                 android:id="@+id/case20"
-                android:layout_width="50dp"
-                android:layout_height="50dp"/>
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
             <TextView
                 android:id="@+id/case27"
-                android:layout_width="50dp"
-                android:layout_height="50dp" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
             <TextView
                 android:id="@+id/case34"
-                android:layout_height="50dp"
-                android:layout_width="50dp" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
             <TextView
                 android:id="@+id/case41"
-                android:layout_height="50dp"
-                android:layout_width="50dp" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/colonne7"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
             android:orientation="vertical">
             <TextView
                 android:id="@+id/case7"
-                android:layout_height="50dp"
-                android:layout_width="50dp" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
             <TextView
                 android:id="@+id/case14"
-                android:layout_height="50dp"
-                android:layout_width="50dp" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
             <TextView
                 android:id="@+id/case21"
-                android:layout_width="50dp"
-                android:layout_height="50dp"/>
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
             <TextView
                 android:id="@+id/case28"
-                android:layout_width="50dp"
-                android:layout_height="50dp" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
             <TextView
                 android:id="@+id/case35"
-                android:layout_height="50dp"
-                android:layout_width="50dp" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
             <TextView
                 android:id="@+id/case42"
-                android:layout_height="50dp"
-                android:layout_width="50dp" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
         </LinearLayout>
     </LinearLayout>
 
     <ImageView
+        android:id="@+id/imgGrille"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@id/grille"
-        android:layout_alignBottom="@id/grille"
         android:layout_centerHorizontal="true"
         android:src="@drawable/grille"
+        android:adjustViewBounds="true"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/subtitle"
         android:contentDescription="grille"/>
 
     <TextView
