@@ -53,7 +53,7 @@ public class Questionnaire extends AppCompatActivity implements View.OnClickList
 
         tv1 = findViewById(R.id.question);
         tv2 = findViewById(R.id.input);
-        tv2.setVisibility(View.INVISIBLE);
+        tv2.setVisibility(View.GONE);
 
         nb_question = 10;
 
@@ -91,7 +91,7 @@ public class Questionnaire extends AppCompatActivity implements View.OnClickList
         btn4.setVisibility(View.INVISIBLE);
         btn5.setVisibility(View.INVISIBLE);
         reponse = new Object[nb_question-1];
-        it = new Intent(this,MainActivity.class);
+        it = new Intent(Questionnaire.this,MainActivity.class);
     }
 
     public static void prepareTabtoSondage(Object[] rep){
@@ -159,11 +159,11 @@ public class Questionnaire extends AppCompatActivity implements View.OnClickList
             case 2:{
                 if(v.equals(this.btn1)){
                     reponse[0] = tv2.getText().toString();
-                    this.tv2.setVisibility(View.INVISIBLE);
+                    this.tv2.setVisibility(View.GONE);
                 }
                 if(v.equals(this.pas_avis)){
                     reponse[0] = null;
-                    this.tv2.setVisibility(View.INVISIBLE);
+                    this.tv2.setVisibility(View.GONE);
                 }
 
                 tv1.setText(this.question[index]);
@@ -229,7 +229,7 @@ public class Questionnaire extends AppCompatActivity implements View.OnClickList
 
                 tv1.setText(this.question[index]);
 
-                tv2.setVisibility(View.INVISIBLE);
+                tv2.setVisibility(View.GONE);
                 tv2.setText("");
 
                 btn3.setVisibility(View.INVISIBLE);
@@ -385,7 +385,7 @@ public class Questionnaire extends AppCompatActivity implements View.OnClickList
                 }
 
                 tv1.setText(this.question[index]);
-                tv2.setVisibility(View.INVISIBLE);
+                tv2.setVisibility(View.GONE);
                 btn1.setText("OUI");
                 btn2.setText("NON");
                 btn3.setText("SANS AVIS");
@@ -424,7 +424,7 @@ public class Questionnaire extends AppCompatActivity implements View.OnClickList
                 tv1.setText("Merci d'avoir repondu !");
 
                 tv2.setText("");
-                tv2.setVisibility(View.INVISIBLE);
+                tv2.setVisibility(View.GONE);
 
                 btn1.setVisibility(View.INVISIBLE);
                 btn2.setVisibility(View.INVISIBLE);
@@ -436,8 +436,9 @@ public class Questionnaire extends AppCompatActivity implements View.OnClickList
 
                 if(v.equals(btn4)){
                     this.reponse = new Object[9];
+                    // elle fait crash la ligne là hein
+                    //Questionnaire.index=0;
                     startActivity(it);
-                    Questionnaire.index=0;
                 }
 
                 break;
