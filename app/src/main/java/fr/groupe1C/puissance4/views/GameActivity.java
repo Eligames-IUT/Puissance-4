@@ -1,5 +1,6 @@
 package fr.groupe1C.puissance4.views;
 
+import android.content.Intent;
 import android.support.annotation.ColorRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -145,13 +146,18 @@ public class GameActivity extends AppCompatActivity {
 
         Joueur etatJoueur = new Joueur(mPlayer1, mPlayer2);
 
-        mColonne1.setOnClickListener(new ListenerCol(this.grille, etatJoueur, 1, mCase1, mCase8, mCase15, mCase22, mCase29, mCase36));
-        mColonne2.setOnClickListener(new ListenerCol(this.grille, etatJoueur,2, mCase2, mCase9, mCase16, mCase23, mCase30, mCase37));
-        mColonne3.setOnClickListener(new ListenerCol(this.grille, etatJoueur,3, mCase3, mCase10, mCase17, mCase24, mCase31, mCase38));
-        mColonne4.setOnClickListener(new ListenerCol(this.grille, etatJoueur,4, mCase4, mCase11, mCase18, mCase25, mCase32, mCase39));
-        mColonne5.setOnClickListener(new ListenerCol(this.grille, etatJoueur,5, mCase5, mCase12, mCase19, mCase26, mCase33, mCase40));
-        mColonne6.setOnClickListener(new ListenerCol(this.grille, etatJoueur, 6, mCase6, mCase13, mCase20, mCase27, mCase34, mCase41));
-        mColonne7.setOnClickListener(new ListenerCol(this.grille, etatJoueur,7, mCase7, mCase14, mCase21, mCase28, mCase35, mCase42));
+        mColonne1.setOnClickListener(new ListenerCol(this, this.grille, etatJoueur, 1, mCase1, mCase8, mCase15, mCase22, mCase29, mCase36));
+        mColonne2.setOnClickListener(new ListenerCol(this, this.grille, etatJoueur,2, mCase2, mCase9, mCase16, mCase23, mCase30, mCase37));
+        mColonne3.setOnClickListener(new ListenerCol(this, this.grille, etatJoueur,3, mCase3, mCase10, mCase17, mCase24, mCase31, mCase38));
+        mColonne4.setOnClickListener(new ListenerCol(this, this.grille, etatJoueur,4, mCase4, mCase11, mCase18, mCase25, mCase32, mCase39));
+        mColonne5.setOnClickListener(new ListenerCol(this, this.grille, etatJoueur,5, mCase5, mCase12, mCase19, mCase26, mCase33, mCase40));
+        mColonne6.setOnClickListener(new ListenerCol(this, this.grille, etatJoueur, 6, mCase6, mCase13, mCase20, mCase27, mCase34, mCase41));
+        mColonne7.setOnClickListener(new ListenerCol(this, this.grille, etatJoueur,7, mCase7, mCase14, mCase21, mCase28, mCase35, mCase42));
         Log.e("", this.grille.toString());
+    }
+
+    public void toQuestionnaire(){
+        Intent intent = new Intent(this, Questionnaire.class);
+        startActivity(intent);
     }
 }

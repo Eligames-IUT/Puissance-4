@@ -15,6 +15,7 @@ import fr.groupe1C.puissance4.views.Questionnaire;
 
 public class ListenerCol extends Activity implements OnClickListener {
 
+    private GameActivity papa;
     private Grille grille;
     private int colonne;
     private TextView mCase1;
@@ -26,7 +27,8 @@ public class ListenerCol extends Activity implements OnClickListener {
     private Joueur etatJoueur;
 
 
-    public ListenerCol(Grille grille, Joueur etatJoueur, int colonne, TextView mCase1, TextView mCase2, TextView mCase3, TextView mCase4, TextView mCase5, TextView mCase6) {
+    public ListenerCol(GameActivity papa, Grille grille, Joueur etatJoueur, int colonne, TextView mCase1, TextView mCase2, TextView mCase3, TextView mCase4, TextView mCase5, TextView mCase6) {
+        this.papa = papa;
         this.grille = grille;
         this.colonne = colonne-1;
         this.etatJoueur = etatJoueur;
@@ -44,16 +46,15 @@ public class ListenerCol extends Activity implements OnClickListener {
         Victoire vic = new Victoire(this.grille.getGrille());
         if (vic.Result()!=0){
 
-            try {
+           /* try {
                 Thread.sleep(2000);
             }
             catch (InterruptedException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
-            }
+            }*/
 
-            Intent intent = new Intent(this, Questionnaire.class);
-            startActivity(intent);
+            this.papa.toQuestionnaire();
 
             //pop up victoire j1 ok vers sondage
             /*AlertDialog.Builder builder = new AlertDialog.Builder(ListenerCol.this);
@@ -144,6 +145,7 @@ public class ListenerCol extends Activity implements OnClickListener {
             mBas.setTextSize((float) 30);
             mBas.setText(" Joueur 1 l'emporte ");
             mBas.setBackgroundResource(R.drawable.p1_round);
+
 
         } else if (vic.Result()==2){
             TextView mHaut = this.etatJoueur.getmPlayer(1);
