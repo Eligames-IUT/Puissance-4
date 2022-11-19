@@ -323,7 +323,7 @@
         android:layout_centerHorizontal="true"
         android:layout_above="@id/j2"
         android:text=" Joueur 1 "
-        android:textSize="50sp"
+        android:textSize="40sp"
         android:textColor="@color/black"/>
 
     <TextView
@@ -335,7 +335,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginVertical="30dp"
         android:text=" Joueur 2 "
-        android:textSize="50sp"
+        android:textSize="40sp"
         android:textColor="@color/black"/>
 
     <Button
@@ -347,7 +347,7 @@
         android:text=" Quitter "
         android:background="@drawable/button_round"
         android:layout_marginBottom="10dp"
-        android:textSize="40sp"
+        android:textSize="35sp"
         android:visibility="invisible"/>
 
 
