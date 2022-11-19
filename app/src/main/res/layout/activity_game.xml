@@ -35,6 +35,8 @@
         android:layout_centerHorizontal="true"
         android:layout_alignTop="@id/imgGrille"
         android:layout_alignBottom="@id/imgGrille"
+        android:layout_alignLeft="@id/imgGrille"
+        android:layout_alignRight="@id/imgGrille"
         android:orientation="horizontal">
 
         <LinearLayout
