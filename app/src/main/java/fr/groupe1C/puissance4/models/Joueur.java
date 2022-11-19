@@ -26,6 +26,14 @@ public class Joueur {
         return this.joueur;
     }
 
+    public TextView getmPlayer(int joueur){
+        if (joueur==1){
+            return this.mPlayer1;
+        } else {
+            return this.mPlayer2;
+        }
+    }
+
     public void switchJoueur() {
         if (this.joueur==1){
             this.joueur=2;

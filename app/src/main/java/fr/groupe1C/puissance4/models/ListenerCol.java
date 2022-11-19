@@ -6,15 +6,12 @@ import android.content.Intent;
 import android.view.View.OnClickListener;
 import android.app.Activity;
 import android.view.View;
-import android.util.Log;
 import android.widget.TextView;
 
 import fr.groupe1C.puissance4.R;
 import fr.groupe1C.puissance4.views.GameActivity;
 import fr.groupe1C.puissance4.views.MainActivity;
 import fr.groupe1C.puissance4.views.Questionnaire;
-
-import android.content.Intent;
 
 public class ListenerCol extends Activity implements OnClickListener {
 
@@ -44,6 +41,54 @@ public class ListenerCol extends Activity implements OnClickListener {
     @Override
     public void onClick(View v) {
 
+        Victoire vic = new Victoire(this.grille.getGrille());
+        if (vic.Result()!=0){
+
+            try {
+                Thread.sleep(2000);
+            }
+            catch (InterruptedException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+
+            Intent intent = new Intent(this, Questionnaire.class);
+            startActivity(intent);
+
+            //pop up victoire j1 ok vers sondage
+            /*AlertDialog.Builder builder = new AlertDialog.Builder(ListenerCol.this);
+
+            builder.setTitle("Victoire !")
+                    .setMessage("Le joueur 1 à gagné.")
+                    .setPositiveButton("CONTINUER", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            Intent intent = new Intent(ListenerCol.this, Questionnaire.class);
+                            startActivity(intent);
+                        }
+                    })
+                    .create()
+                    .show();*/
+        }
+
+
+        // Teste si le pion rend la grille pleine
+        int pionInGrille = 0;
+
+        for (int i=0; i<6; i++){
+            for (int j=0; j<7; j++){
+                if (this.grille.getGrille()[i][j]!=0){
+                    pionInGrille+=1;
+                }
+            }
+        }
+        // Met fin à la partie si la grille est pleine
+        if(pionInGrille==6*7){
+            // pop up match nul, ok vers sondage
+        }
+
+
+        //place un pion en fonction de l'état de la grille et du joueur actif
         int line = this.grille.getLowestJeton(this.colonne);
         if (this.etatJoueur.getJoueur()==1) {
             if (line == 0) {
@@ -88,59 +133,26 @@ public class ListenerCol extends Activity implements OnClickListener {
 
         }
 
-        Victoire vic = new Victoire(this.grille.getGrille());
-        if (vic.Result()==1){
-            //pop up victoire j1 ok vers sondage
-            /*AlertDialog.Builder builder = new AlertDialog.Builder(ListenerCol.this);
 
-            builder.setTitle("Victoire !")
-                    .setMessage("Le joueur 1 à gagné.")
-                    .setPositiveButton("CONTINUER", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            Intent intent = new Intent(ListenerCol.this, Questionnaire.class);
-                            startActivity(intent);
-                        }
-                    })
-                    .create()
-                    .show();*/
+        // change le joueur actif
+        if (line<6 & vic.Result()==0) {
+            this.etatJoueur.switchJoueur();
+        } else if (vic.Result()==1){
+            TextView mHaut = this.etatJoueur.getmPlayer(1);
+            TextView mBas = this.etatJoueur.getmPlayer(2);
+            mHaut.setText(" Victoire ! ");
+            mBas.setTextSize((float) 30);
+            mBas.setText(" Joueur 1 l'emporte ");
+            mBas.setBackgroundResource(R.drawable.p1_round);
+
         } else if (vic.Result()==2){
-            // pop up victoire j2 ok vers sondage
-            /*AlertDialog.Builder builder = new AlertDialog.Builder(ListenerCol.this);
+            TextView mHaut = this.etatJoueur.getmPlayer(1);
+            TextView mBas = this.etatJoueur.getmPlayer(2);
+            mHaut.setText(" Victoire ! ");
+            mBas.setTextSize((float) 30);
+            mBas.setText(" Joueur 2 l'emporte ");
+            mHaut.setBackgroundResource(R.drawable.p2_round);
 
-            builder.setTitle("Victoire !")
-                    .setMessage("Le joueur 2 à gagné.")
-                    .setPositiveButton("CONTINUER", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            Intent intent = new Intent(ListenerCol.this, Questionnaire.class);
-                            startActivity(intent);
-                        }
-                    })
-                    .create()
-                    .show();*/
-        }
-
-
-
-        // Teste si le pion rend la grille pleine
-        int pionInGrille = 0;
-
-        for (int i=0; i<6; i++){
-            for (int j=0; j<7; j++){
-                if (this.grille.getGrille()[i][j]!=0){
-                    pionInGrille+=1;
-                }
-            }
-        }
-        // Met fin à la partie si la grille est pleine
-        if(pionInGrille==6*7){
-            // pop up match nul, ok vers sondage
-        }
-
-
-        if (line<6) {
-            etatJoueur.switchJoueur();
         }
 
     }
