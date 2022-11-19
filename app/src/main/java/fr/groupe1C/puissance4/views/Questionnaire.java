@@ -14,7 +14,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import fr.groupe1C.puissance4.R;
-import fr.groupe1C.puissance4.models.Sondage;
+// import fr.groupe1C.puissance4.models.Sondage;
 
 public class Questionnaire extends AppCompatActivity implements View.OnClickListener {
 
