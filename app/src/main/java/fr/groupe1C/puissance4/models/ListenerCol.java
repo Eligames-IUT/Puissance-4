@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.view.View.OnClickListener;
 import android.app.Activity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import fr.groupe1C.puissance4.R;
@@ -14,7 +15,7 @@ import fr.groupe1C.puissance4.views.MainActivity;
 import fr.groupe1C.puissance4.views.Questionnaire;
 
 public class ListenerCol extends Activity implements OnClickListener {
-
+    private  Button mQuest;
     private GameActivity papa;
     private Grille grille;
     private int colonne;
@@ -27,7 +28,8 @@ public class ListenerCol extends Activity implements OnClickListener {
     private Joueur etatJoueur;
 
 
-    public ListenerCol(GameActivity papa, Grille grille, Joueur etatJoueur, int colonne, TextView mCase1, TextView mCase2, TextView mCase3, TextView mCase4, TextView mCase5, TextView mCase6) {
+    public ListenerCol(Button mQuest, GameActivity papa, Grille grille, Joueur etatJoueur, int colonne, TextView mCase1, TextView mCase2, TextView mCase3, TextView mCase4, TextView mCase5, TextView mCase6) {
+        this.mQuest = mQuest;
         this.papa = papa;
         this.grille = grille;
         this.colonne = colonne-1;
@@ -45,31 +47,7 @@ public class ListenerCol extends Activity implements OnClickListener {
 
         Victoire vic = new Victoire(this.grille.getGrille());
         if (vic.Result()!=0){
-
-           /* try {
-                Thread.sleep(2000);
-            }
-            catch (InterruptedException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-            }*/
-
-            this.papa.toQuestionnaire();
-
-            //pop up victoire j1 ok vers sondage
-            /*AlertDialog.Builder builder = new AlertDialog.Builder(ListenerCol.this);
-
-            builder.setTitle("Victoire !")
-                    .setMessage("Le joueur 1 à gagné.")
-                    .setPositiveButton("CONTINUER", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            Intent intent = new Intent(ListenerCol.this, Questionnaire.class);
-                            startActivity(intent);
-                        }
-                    })
-                    .create()
-                    .show();*/
+            return;
         }
 
 
@@ -136,25 +114,21 @@ public class ListenerCol extends Activity implements OnClickListener {
 
 
         // change le joueur actif
-        if (line<6 & vic.Result()==0) {
+        int resultat = vic.Result();
+        if (line<6 & resultat==0) {
             this.etatJoueur.switchJoueur();
-        } else if (vic.Result()==1){
+        } else if (resultat>0){
             TextView mHaut = this.etatJoueur.getmPlayer(1);
             TextView mBas = this.etatJoueur.getmPlayer(2);
             mHaut.setText(" Victoire ! ");
             mBas.setTextSize((float) 30);
-            mBas.setText(" Joueur 1 l'emporte ");
-            mBas.setBackgroundResource(R.drawable.p1_round);
-
-
-        } else if (vic.Result()==2){
-            TextView mHaut = this.etatJoueur.getmPlayer(1);
-            TextView mBas = this.etatJoueur.getmPlayer(2);
-            mHaut.setText(" Victoire ! ");
-            mBas.setTextSize((float) 30);
-            mBas.setText(" Joueur 2 l'emporte ");
-            mHaut.setBackgroundResource(R.drawable.p2_round);
-
+            this.mQuest.setVisibility(View.VISIBLE);
+            mBas.setText(" Joueur "+resultat+" l'emporte ");
+            if (resultat==1) {
+                mBas.setBackgroundResource(R.drawable.p1_round);
+            } else if (resultat==2) {
+                mHaut.setBackgroundResource(R.drawable.p2_round);
+            }
         }
 
     }

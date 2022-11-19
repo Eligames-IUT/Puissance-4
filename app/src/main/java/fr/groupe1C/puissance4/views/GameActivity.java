@@ -9,6 +9,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Button;
 
 import org.w3c.dom.Text;
 
@@ -16,6 +17,7 @@ import fr.groupe1C.puissance4.R;
 import fr.groupe1C.puissance4.models.Grille;
 import fr.groupe1C.puissance4.models.Joueur;
 import fr.groupe1C.puissance4.models.ListenerCol;
+import fr.groupe1C.puissance4.models.NextActivity;
 
 public class GameActivity extends AppCompatActivity {
 
@@ -23,6 +25,8 @@ public class GameActivity extends AppCompatActivity {
 
     private TextView mTitre;
     private LinearLayout mGrille;
+
+    private Button mQuest;
 
     private LinearLayout mColonne1;
     private LinearLayout mColonne2;
@@ -87,6 +91,8 @@ public class GameActivity extends AppCompatActivity {
         mTitre = findViewById(R.id.eligames);
         mGrille = findViewById(R.id.grille);
 
+        mQuest = findViewById(R.id.quest);
+
         mColonne1 = findViewById(R.id.colonne1);
         mColonne2 = findViewById(R.id.colonne2);
         mColonne3 = findViewById(R.id.colonne3);
@@ -146,14 +152,15 @@ public class GameActivity extends AppCompatActivity {
 
         Joueur etatJoueur = new Joueur(mPlayer1, mPlayer2);
 
-        mColonne1.setOnClickListener(new ListenerCol(this, this.grille, etatJoueur, 1, mCase1, mCase8, mCase15, mCase22, mCase29, mCase36));
-        mColonne2.setOnClickListener(new ListenerCol(this, this.grille, etatJoueur,2, mCase2, mCase9, mCase16, mCase23, mCase30, mCase37));
-        mColonne3.setOnClickListener(new ListenerCol(this, this.grille, etatJoueur,3, mCase3, mCase10, mCase17, mCase24, mCase31, mCase38));
-        mColonne4.setOnClickListener(new ListenerCol(this, this.grille, etatJoueur,4, mCase4, mCase11, mCase18, mCase25, mCase32, mCase39));
-        mColonne5.setOnClickListener(new ListenerCol(this, this.grille, etatJoueur,5, mCase5, mCase12, mCase19, mCase26, mCase33, mCase40));
-        mColonne6.setOnClickListener(new ListenerCol(this, this.grille, etatJoueur, 6, mCase6, mCase13, mCase20, mCase27, mCase34, mCase41));
-        mColonne7.setOnClickListener(new ListenerCol(this, this.grille, etatJoueur,7, mCase7, mCase14, mCase21, mCase28, mCase35, mCase42));
-        Log.e("", this.grille.toString());
+        mColonne1.setOnClickListener(new ListenerCol( mQuest,this, this.grille, etatJoueur, 1, mCase1, mCase8, mCase15, mCase22, mCase29, mCase36));
+        mColonne2.setOnClickListener(new ListenerCol( mQuest,this, this.grille, etatJoueur,2, mCase2, mCase9, mCase16, mCase23, mCase30, mCase37));
+        mColonne3.setOnClickListener(new ListenerCol( mQuest,this, this.grille, etatJoueur,3, mCase3, mCase10, mCase17, mCase24, mCase31, mCase38));
+        mColonne4.setOnClickListener(new ListenerCol( mQuest,this, this.grille, etatJoueur,4, mCase4, mCase11, mCase18, mCase25, mCase32, mCase39));
+        mColonne5.setOnClickListener(new ListenerCol( mQuest,this, this.grille, etatJoueur,5, mCase5, mCase12, mCase19, mCase26, mCase33, mCase40));
+        mColonne6.setOnClickListener(new ListenerCol( mQuest,this, this.grille, etatJoueur, 6, mCase6, mCase13, mCase20, mCase27, mCase34, mCase41));
+        mColonne7.setOnClickListener(new ListenerCol( mQuest,this, this.grille, etatJoueur,7, mCase7, mCase14, mCase21, mCase28, mCase35, mCase42));
+
+        mQuest.setOnClickListener(new NextActivity(this));
     }
 
     public void toQuestionnaire(){
