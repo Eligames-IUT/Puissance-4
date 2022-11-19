@@ -21,7 +21,7 @@ public class Questionnaire extends AppCompatActivity implements View.OnClickList
     private TextView tv1;
     private TextView tv2;
 
-    private Sondage sdg;
+//     private Sondage sdg;
     private String[] question;
     private Object[] reponse;
 
