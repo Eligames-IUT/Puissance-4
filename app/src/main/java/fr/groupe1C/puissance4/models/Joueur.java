@@ -9,6 +9,11 @@ import android.widget.TextView;
 
 import fr.groupe1C.puissance4.R;
 
+/**
+ * @author Julien Charbonnel & Kayyissa Haissous
+ * @version 1.0
+ * @since 2022-10-01
+ */
 public class Joueur {
 
     private int joueur;
@@ -22,6 +27,10 @@ public class Joueur {
         this.mPlayer1.setBackgroundResource(R.drawable.p1_round);
     }
 
+    /**
+     * cette méthode permet de récupérer le numéro du joueur
+     * @return
+     */
     public int getJoueur(){
         return this.joueur;
     }
@@ -34,6 +43,9 @@ public class Joueur {
         }
     }
 
+    /**
+     * cette méthode permet de changer de joueur
+     */
     public void switchJoueur() {
         if (this.joueur==1){
             this.joueur=2;

@@ -1,5 +1,10 @@
 package fr.groupe1C.puissance4.models;
 
+/**
+ * @author Julien Charbonnel & Kayyissa Haissous
+ * @version 1.0
+ * @since 2022-10-01
+ */
 public class Victoire {
 
     private int[][] grille;
@@ -8,6 +13,10 @@ public class Victoire {
         this.grille=grille;
     }
 
+    /**
+     * 
+     * @return 0 si pas de victoire, 1 si victoire du joueur 1, 2 si victoire du joueur 2
+     */
     public int Result(){
         if (checkcol()==1 || checkline()==1 || checkdiag1()==1 || checkdiag2()==1){
             return 1;
@@ -18,6 +27,10 @@ public class Victoire {
         }
     }
 
+    /**
+     * Cette méthode vérifie si il y a 4 pions alignés sur une colonne
+     * 
+     */
     protected int checkcol(){
         for(int i=0; i<3; i++){
             for(int j=0; j<7; j++){
@@ -32,6 +45,10 @@ public class Victoire {
     }
 
 
+    /**
+     * Cette méthode vérifie si il y a 4 pions alignés sur une ligne
+     * 
+     */
     protected int checkline(){
         for(int i=0; i<6; i++){
             for(int j=0; j<4; j++){
@@ -46,6 +63,10 @@ public class Victoire {
     }
 
 
+    /**
+     * Cette méthode vérifie si il y a 4 pions alignés sur une diagonale
+     * 
+     */
     protected int checkdiag1(){
         for(int i=0; i<3; i++) {
             for (int j = 0; j < 4; j++) {
@@ -59,6 +80,7 @@ public class Victoire {
         return 0;
     }
 
+    
     protected int checkdiag2(){
         for(int i=0; i<3; i++){
             for(int j=3; j<7; j++){
