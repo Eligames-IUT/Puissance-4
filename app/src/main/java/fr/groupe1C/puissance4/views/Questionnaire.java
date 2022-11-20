@@ -14,16 +14,16 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import fr.groupe1C.puissance4.R;
-// import fr.groupe1C.puissance4.models.Sondage;
+ import fr.groupe1C.puissance4.models.Sondage;
 
 public class Questionnaire extends AppCompatActivity implements View.OnClickListener {
 
     private TextView tv1;
     private TextView tv2;
 
-//     private Sondage sdg;
+    private Sondage sdg;
     private String[] question;
-    private Object[] reponse;
+    private String[] reponse;
 
     private Button btn1;
     private Button btn2;
@@ -90,7 +90,7 @@ public class Questionnaire extends AppCompatActivity implements View.OnClickList
         btn3.setVisibility(View.GONE);
         btn4.setVisibility(View.GONE);
         btn5.setVisibility(View.GONE);
-        reponse = new Object[nb_question-1];
+        reponse = new String[nb_question-1];
         it = new Intent(Questionnaire.this,MainActivity.class);
     }
 
@@ -102,18 +102,18 @@ public class Questionnaire extends AppCompatActivity implements View.OnClickList
                         rep[i]=Integer.parseInt((String)rep[i]);
                     }
                     catch (NumberFormatException ex){
-                        rep[i]=null;
+                        rep[i]=-1;
                     }
                 }
                 else if(i == 0){
-                    if(rep[i].equals("O")){
+                    if(rep[i].equals("OUI")){
                         rep[i] = true;
                     }
-                    else if(rep[i].equals("N")){
+                    else if(rep[i].equals("NON")){
                         rep[i] = false;
                     }
                     else{
-                        rep[i] = null;
+                        rep[i] = -1;
                     }
                 }
                 else{
@@ -162,7 +162,7 @@ public class Questionnaire extends AppCompatActivity implements View.OnClickList
                     this.tv2.setVisibility(View.GONE);
                 }
                 if(v.equals(this.pas_avis)){
-                    reponse[0] = null;
+                    reponse[0] = "-1" ;
                     this.tv2.setVisibility(View.GONE);
                 }
 
@@ -200,7 +200,7 @@ public class Questionnaire extends AppCompatActivity implements View.OnClickList
                     reponse[1]=btn5.getText().toString();
                 }
                 if(v.equals(this.pas_avis)){
-                    reponse[1] = null;
+                    reponse[1] = "-1";
                 }
 
                 tv1.setText(this.question[index]);
@@ -223,7 +223,7 @@ public class Questionnaire extends AppCompatActivity implements View.OnClickList
                     reponse[2] = tv2.getText().toString();
                 }
                 if(v.equals(this.pas_avis)){
-                    reponse[2] = null;
+                    reponse[2] = "-1";
                 }
 
 
@@ -259,7 +259,7 @@ public class Questionnaire extends AppCompatActivity implements View.OnClickList
                     reponse[3] = btn4.getText().toString();
                 }
                 if(v.equals(this.pas_avis)){
-                    reponse[3] = null;
+                    reponse[3] = "-1";
                 }
 
                 tv1.setText(this.question[index]);
@@ -298,7 +298,7 @@ public class Questionnaire extends AppCompatActivity implements View.OnClickList
                     reponse[4] = btn5.getText().toString();
                 }
                 if(v.equals(this.pas_avis)){
-                    reponse[4] = null;
+                    reponse[4] = "-1";
                 }
 
                 tv1.setText(this.question[index]);
@@ -327,7 +327,7 @@ public class Questionnaire extends AppCompatActivity implements View.OnClickList
                     reponse[5] = btn4.getText().toString();
                 }
                 if(v.equals(this.pas_avis)){
-                    reponse[5] = null;
+                    reponse[5] = "-1";
                 }
 
                 tv1.setText(this.question[index]);
@@ -353,7 +353,7 @@ public class Questionnaire extends AppCompatActivity implements View.OnClickList
                     reponse[6] = btn4.getText().toString();
                 }
                 if(v.equals(this.pas_avis)){
-                    reponse[6] = null;
+                    reponse[6] = "-1";
                 }
 
                 tv1.setText(this.question[index]);
@@ -381,7 +381,7 @@ public class Questionnaire extends AppCompatActivity implements View.OnClickList
                     reponse[7] = btn4.getText().toString();
                 }
                 if(v.equals(this.pas_avis)){
-                    reponse[7] = null;
+                    reponse[7] = "-1";
                 }
 
                 tv1.setText(this.question[index]);
@@ -397,13 +397,13 @@ public class Questionnaire extends AppCompatActivity implements View.OnClickList
             case 10:{
 
                 if(v.equals(this.btn1)){
-                    reponse[8] = btn1.getText().toString();
+                    reponse[8] = "1";
                 }
                 if(v.equals(this.btn2)){
-                    reponse[8] = btn2.getText().toString();
+                    reponse[8] = "0";
                 }
                 if(v.equals(this.btn3)){
-                    reponse[8] = btn3.getText().toString();
+                    reponse[8] = "0";
                 }
                 if(v.equals(this.pas_avis)){
                     reponse[8]= null;
@@ -411,15 +411,17 @@ public class Questionnaire extends AppCompatActivity implements View.OnClickList
 
 
 
-                Questionnaire.prepareTabtoSondage(reponse);
+//                Questionnaire.prepareTabtoSondage(reponse);
 //                tv1.setText(reponse[0]+" "+reponse[1]+" "+reponse[2]+" "+reponse[3]+" "+
 //                        reponse[4]+" "+reponse[5]+" "+reponse[6]+" "+reponse[7]+" "+reponse[8]);
 
 //                sdg = new Sondage((int)reponse[0],(String)reponse[1],(int)reponse[2],(Boolean)reponse[3],
 //                        (String)reponse[4],(String)reponse[5],(String)reponse[6],(String)reponse[7],(Boolean)reponse[8]);
-//
-//                sdg.insertSondage((int)reponse[0],(String)reponse[1],(int)reponse[2],(Boolean)reponse[3],
-//                        (String)reponse[4],(String)reponse[5],(String)reponse[6],(String)reponse[7],(Boolean)reponse[8]);
+////
+//                Sondage.insertSondage(Integer.parseInt(reponse[0]),reponse[1],Integer.parseInt(reponse[2]),reponse[3],
+//                        reponse[4],reponse[5],reponse[6],reponse[7],Boolean.parseBoolean(reponse[8]));
+
+                Sondage.insertSondage(-1,null,-1,null,null,null,null,null,null);
 
                 tv1.setText("Merci d'avoir repondu !");
 
@@ -435,9 +437,7 @@ public class Questionnaire extends AppCompatActivity implements View.OnClickList
                 btn4.setVisibility(View.VISIBLE);
 
                 if(v.equals(btn4)){
-                    this.reponse = new Object[9];
-                    // elle fait crash la ligne là hein
-                    //Questionnaire.index=0;
+                    this.reponse = new String[9];
                     startActivity(it);
                 }
 

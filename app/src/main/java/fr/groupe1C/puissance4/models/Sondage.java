@@ -14,12 +14,12 @@ public class Sondage {
     private int age;
     private String sexe;
     private int nbParties;
-    private boolean facililité;
+    private String facililité;
     private String statut;
     private String matrimoniale;
     private String prochainJeux;
     private String avecQui;
-    private Boolean mode;
+    private boolean mode;
 
     // getter age
     public int getAge() {
@@ -32,7 +32,7 @@ public class Sondage {
     }
 
     // getter facililité
-    public boolean getFacililité() {
+    public String getFacililité() {
         return facililité;
     }
 
@@ -66,7 +66,7 @@ public class Sondage {
         return sexe;
     }
 
-    public Sondage(int age, String sexe, int nbParties, Boolean facililité, String statut, String matrimoniale, String prochainJeux, String avecQui, Boolean mode) {
+    public Sondage(int age, String sexe, int nbParties, String facililité, String statut, String matrimoniale, String prochainJeux, String avecQui, Boolean mode) {
         this.age = age;
         this.sexe = sexe;
         this.nbParties = nbParties;
@@ -111,14 +111,16 @@ public class Sondage {
      * @param mode
      * @return true si l'insertion a réussi et false sinon
      */
-    public static boolean insertSondage(int age, String sexe, int nbParties, Boolean facililité, String statut, String matrimoniale, String prochainJeux, String avecQui, Boolean mode) {
+    public static boolean insertSondage(int age, String sexe, int nbParties, String facililité, String statut, String matrimoniale, String prochainJeux, String avecQui, Boolean mode) {
         Connection conn = connect();
         try {
+            assert conn != null;
             PreparedStatement ps = conn.prepareStatement("INSERT INTO repSondage VALUES (?,?,?,?,?,?,?,?,?)");
+
             ps.setInt(1, age);
             ps.setString(2, sexe);
             ps.setInt(3, nbParties);
-            ps.setBoolean(4, facililité);
+            ps.setString(4, facililité);
             ps.setString(5, statut);
             ps.setString(6, matrimoniale);
             ps.setString(7, prochainJeux);
@@ -147,7 +149,7 @@ public class Sondage {
             PreparedStatement ps = conn.prepareStatement("SELECT * FROM repSondage");
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                sondages.add(new Sondage(rs.getInt("age"), rs.getString("sexe"), rs.getInt("nbParties"), rs.getBoolean("facililité"), rs.getString("statut"), rs.getString("matrimoniale"), rs.getString("prochainJeux"), rs.getString("avecQui"), rs.getBoolean("mode")));
+                sondages.add(new Sondage(rs.getInt("age"), rs.getString("sexe"), rs.getInt("nbParties"), rs.getString("facililité"), rs.getString("statut"), rs.getString("matrimoniale"), rs.getString("prochainJeux"), rs.getString("avecQui"), rs.getBoolean("mode")));
             }
             ps.close();
             conn.close();
@@ -172,7 +174,7 @@ public class Sondage {
         for (Sondage sondage : sondages) {
             age += sondage.getAge();
             nbParties += sondage.getNbParties();
-            if (sondage.getFacililité()) {
+            if (sondage.getFacililité() != null) {
                 facililité++;
             }
             if (sondage.getMode()) {
