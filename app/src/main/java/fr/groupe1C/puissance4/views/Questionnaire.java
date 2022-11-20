@@ -176,8 +176,8 @@ public class Questionnaire extends AppCompatActivity implements View.OnClickList
 
                 this.btn2.setVisibility(View.VISIBLE);
                 this.btn3.setVisibility(View.VISIBLE);
-                this.btn4.setVisibility(View.VISIBLE);
-                this.btn5.setVisibility(View.VISIBLE);
+                this.btn4.setVisibility(View.INVISIBLE);
+                this.btn5.setVisibility(View.INVISIBLE);
                 Questionnaire.index++;
                 break;
             }
@@ -421,7 +421,7 @@ public class Questionnaire extends AppCompatActivity implements View.OnClickList
 //                Sondage.insertSondage(Integer.parseInt(reponse[0]),reponse[1],Integer.parseInt(reponse[2]),reponse[3],
 //                        reponse[4],reponse[5],reponse[6],reponse[7],Boolean.parseBoolean(reponse[8]));
 
-                Sondage.insertSondage(-1,null,-1,null,null,null,null,null,null);
+//                Sondage.insertSondage(-1,null,-1,null,null,null,null,null,null);
 
                 tv1.setText("Merci d'avoir repondu !");
 
