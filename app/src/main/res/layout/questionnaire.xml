@@ -1,23 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="8dp"
-    android:layout_marginTop="50dip"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:background="@color/light_grey"
     tools:context=".views.Questionnaire">
-
 
     <TextView
         android:id="@+id/question"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-
         android:padding="10dp"
-        android:layout_weight="0"
+        android:layout_marginTop="50dip"
         android:background="@color/teal_700"
         android:gravity="center"
         android:textColor="@color/white"
@@ -25,12 +23,18 @@
         android:textStyle="bold"
         android:text="Ce jeu vous a-t-il plus ?" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/question"
+        android:layout_above="@id/btn6"
+        tools:context=".views.Questionnaire">
+
     <EditText
         android:id="@+id/input"
-
         android:layout_width="match_parent"
         android:layout_height="90sp"
-        android:layout_above="@id/question"
         android:gravity="center"
 
         android:inputType="text" />
@@ -40,7 +44,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_above="@id/question"
-        android:layout_weight="0"
         android:layout_margin="8dp"
         android:padding="16dp"
         android:textSize="20sp"
@@ -54,7 +57,6 @@
         android:layout_gravity="center_horizontal"
         android:layout_above="@id/btn1"
         android:layout_margin="8dp"
-        android:layout_weight="0"
         android:padding="16dp"
         android:textSize="20sp"
         android:textStyle="normal"
@@ -67,7 +69,6 @@
         android:layout_gravity="center_horizontal"
         android:layout_above="@id/btn2"
         android:layout_margin="8dp"
-        android:layout_weight="0"
         android:padding="16dp"
         android:textSize="20sp"
         android:textStyle="normal"
@@ -79,7 +80,6 @@
         android:layout_gravity="center_horizontal"
         android:layout_above="@id/btn3"
         android:layout_margin="8dp"
-        android:layout_weight="0"
         android:padding="16dp"
         android:textSize="20sp"
         android:textStyle="normal"
@@ -91,24 +91,23 @@
         android:layout_gravity="center_horizontal"
         android:layout_above="@id/btn4"
         android:layout_margin="8dp"
-        android:layout_weight="0"
         android:padding="16dp"
         android:textSize="20sp"
         android:textStyle="normal"
         android:text="" />
+    </LinearLayout>
     <Button
         android:id="@+id/btn6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_margin="8dp"
-        android:layout_weight="0"
-        android:padding="16dp"
-        android:textSize="20sp"
+        android:padding="8dp"
+        android:layout_marginBottom="30dp"
+        android:textSize="15sp"
         android:textStyle="normal"
         android:layout_alignParentBottom="true"
         android:text="Je ne souhaite pas répondre" />
 
-</LinearLayout>
+</RelativeLayout>
 
 

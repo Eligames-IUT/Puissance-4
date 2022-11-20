@@ -87,9 +87,9 @@ public class Questionnaire extends AppCompatActivity implements View.OnClickList
         btn4.setOnClickListener(this);
         btn5.setOnClickListener(this);
         pas_avis.setOnClickListener(this);
-        btn3.setVisibility(View.INVISIBLE);
-        btn4.setVisibility(View.INVISIBLE);
-        btn5.setVisibility(View.INVISIBLE);
+        btn3.setVisibility(View.GONE);
+        btn4.setVisibility(View.GONE);
+        btn5.setVisibility(View.GONE);
         reponse = new Object[nb_question-1];
         it = new Intent(Questionnaire.this,MainActivity.class);
     }
@@ -145,7 +145,7 @@ public class Questionnaire extends AppCompatActivity implements View.OnClickList
                     tv2.setInputType(InputType.TYPE_CLASS_NUMBER);
                     tv2.setVisibility(View.VISIBLE);
                     btn1.setText("Valider");
-                    btn2.setVisibility(View.INVISIBLE);
+                    btn2.setVisibility(View.GONE);
                 }
                 if(v.equals(btn2) || v.equals(pas_avis)){
                     startActivity(it);
@@ -209,10 +209,10 @@ public class Questionnaire extends AppCompatActivity implements View.OnClickList
 
                 this.tv2.setVisibility(View.VISIBLE);
                 this.btn1.setText("Valider");
-                this.btn2.setVisibility(View.INVISIBLE);
-                this.btn3.setVisibility(View.INVISIBLE);
-                this.btn4.setVisibility(View.INVISIBLE);
-                this.btn5.setVisibility(View.INVISIBLE);
+                this.btn2.setVisibility(View.GONE);
+                this.btn3.setVisibility(View.GONE);
+                this.btn4.setVisibility(View.GONE);
+                this.btn5.setVisibility(View.GONE);
 
                 Questionnaire.index++;
                 break;
@@ -232,7 +232,7 @@ public class Questionnaire extends AppCompatActivity implements View.OnClickList
                 tv2.setVisibility(View.GONE);
                 tv2.setText("");
 
-                btn3.setVisibility(View.INVISIBLE);
+                btn3.setVisibility(View.GONE);
 
                 btn1.setText("très facile");
                 btn2.setText("facile");
@@ -309,7 +309,7 @@ public class Questionnaire extends AppCompatActivity implements View.OnClickList
                 this.btn3.setText("trouple");
                 this.btn4.setText("couple libre");
 
-                this.btn5.setVisibility(View.INVISIBLE);
+                this.btn5.setVisibility(View.GONE);
                 Questionnaire.index++;
                 break;
             }
@@ -390,7 +390,7 @@ public class Questionnaire extends AppCompatActivity implements View.OnClickList
                 btn2.setText("NON");
                 btn3.setText("SANS AVIS");
                 btn3.setVisibility(View.VISIBLE);
-                btn4.setVisibility(View.INVISIBLE);
+                btn4.setVisibility(View.GONE);
                 Questionnaire.index++;
                 break;
             }
@@ -429,7 +429,7 @@ public class Questionnaire extends AppCompatActivity implements View.OnClickList
                 btn1.setVisibility(View.INVISIBLE);
                 btn2.setVisibility(View.INVISIBLE);
                 btn3.setVisibility(View.INVISIBLE);
-                pas_avis.setVisibility(View.INVISIBLE);
+                pas_avis.setVisibility(View.GONE);
 
                 btn4.setText("Retour à l'accueil");
                 btn4.setVisibility(View.VISIBLE);
