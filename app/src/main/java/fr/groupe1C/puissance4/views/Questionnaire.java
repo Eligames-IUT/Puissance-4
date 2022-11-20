@@ -97,7 +97,7 @@ public class Questionnaire extends AppCompatActivity implements View.OnClickList
     public static void prepareTabtoSondage(Object[] rep){
         for(int i = 0; i < rep.length; i++){
             if(rep[i] != null){
-                if(i == 0 || i == 2){
+                if(i == 1 || i == 3){
                     try{
                         rep[i]=Integer.parseInt((String)rep[i]);
                     }
@@ -105,7 +105,7 @@ public class Questionnaire extends AppCompatActivity implements View.OnClickList
                         rep[i]=null;
                     }
                 }
-                else if(i == 3 || i == 8){
+                else if(i == 0){
                     if(rep[i].equals("O")){
                         rep[i] = true;
                     }
