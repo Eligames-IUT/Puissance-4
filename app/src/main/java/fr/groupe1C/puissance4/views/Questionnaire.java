@@ -1,27 +1,24 @@
 package fr.groupe1C.puissance4.views;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.text.InputType;
 import android.view.View;
 import android.widget.Button;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.TextView;
 
-import java.util.ArrayList;
 
 import fr.groupe1C.puissance4.R;
-// import fr.groupe1C.puissance4.models.Sondage;
+import fr.groupe1C.puissance4.models.Sondage;
 
 public class Questionnaire extends AppCompatActivity implements View.OnClickListener {
 
     private TextView tv1;
     private TextView tv2;
 
-//     private Sondage sdg;
+    private Sondage sdg;
     private String[] question;
     private Object[] reponse;
 
@@ -106,10 +103,10 @@ public class Questionnaire extends AppCompatActivity implements View.OnClickList
                     }
                 }
                 else if(i == 3 || i == 8){
-                    if(rep[i].equals("O")){
+                    if(rep[i].equals("OUI")){
                         rep[i] = true;
                     }
-                    else if(rep[i].equals("N")){
+                    else if(rep[i].equals("NON")){
                         rep[i] = false;
                     }
                     else{
@@ -157,6 +154,8 @@ public class Questionnaire extends AppCompatActivity implements View.OnClickList
             }
 
             case 2:{
+
+
                 if(v.equals(this.btn1)){
                     reponse[0] = tv2.getText().toString();
                     this.tv2.setVisibility(View.GONE);
@@ -168,6 +167,7 @@ public class Questionnaire extends AppCompatActivity implements View.OnClickList
 
                 tv1.setText(this.question[index]);
                 this.tv2.setText("");
+                this.tv2.setHint("");
                 this.btn1.setText("HOMME");
                 this.btn2.setText("FEMME");
                 this.btn3.setText("AUTRE");
@@ -176,10 +176,11 @@ public class Questionnaire extends AppCompatActivity implements View.OnClickList
 
                 this.btn2.setVisibility(View.VISIBLE);
                 this.btn3.setVisibility(View.VISIBLE);
-                this.btn4.setVisibility(View.VISIBLE);
-                this.btn5.setVisibility(View.VISIBLE);
+                this.btn4.setVisibility(View.INVISIBLE);
+                this.btn5.setVisibility(View.INVISIBLE);
                 Questionnaire.index++;
                 break;
+
             }
 
             case 3 :{
@@ -219,6 +220,7 @@ public class Questionnaire extends AppCompatActivity implements View.OnClickList
             }
 
             case 4 :{
+
                 if(v.equals(this.btn1)){
                     reponse[2] = tv2.getText().toString();
                 }
@@ -411,15 +413,17 @@ public class Questionnaire extends AppCompatActivity implements View.OnClickList
 
 
 
-                Questionnaire.prepareTabtoSondage(reponse);
+//                Questionnaire.prepareTabtoSondage(reponse);
+//
 //                tv1.setText(reponse[0]+" "+reponse[1]+" "+reponse[2]+" "+reponse[3]+" "+
 //                        reponse[4]+" "+reponse[5]+" "+reponse[6]+" "+reponse[7]+" "+reponse[8]);
 
-//                sdg = new Sondage((int)reponse[0],(String)reponse[1],(int)reponse[2],(Boolean)reponse[3],
-//                        (String)reponse[4],(String)reponse[5],(String)reponse[6],(String)reponse[7],(Boolean)reponse[8]);
-//
+
 //                sdg.insertSondage((int)reponse[0],(String)reponse[1],(int)reponse[2],(Boolean)reponse[3],
 //                        (String)reponse[4],(String)reponse[5],(String)reponse[6],(String)reponse[7],(Boolean)reponse[8]);
+
+//                sdg = new Sondage(20,"H",5,true,"etudiant","celibataire","Echec","Amis",true);
+//                    Sondage.insertSondage(20,"H",5,true,"etudiant","celibataire","Echec","Amis",true);
 
                 tv1.setText("Merci d'avoir repondu !");
 
@@ -435,9 +439,7 @@ public class Questionnaire extends AppCompatActivity implements View.OnClickList
                 btn4.setVisibility(View.VISIBLE);
 
                 if(v.equals(btn4)){
-                    this.reponse = new Object[9];
-                    // elle fait crash la ligne là hein
-                    //Questionnaire.index=0;
+
                     startActivity(it);
                 }
 
