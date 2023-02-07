@@ -1,4 +1,4 @@
-package fr.groupe1C.puissance4.models;
+package fr.eligames.puissance4.models;
 
 import android.app.Activity;
 import android.view.View;

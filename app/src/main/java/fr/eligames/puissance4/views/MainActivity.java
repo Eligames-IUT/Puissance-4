@@ -1,4 +1,4 @@
-package fr.groupe1C.puissance4.views;
+package fr.eligames.puissance4.views;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;

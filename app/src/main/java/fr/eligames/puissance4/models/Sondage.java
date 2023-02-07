@@ -1,4 +1,4 @@
-package fr.groupe1C.puissance4.models;
+package fr.eligames.puissance4.models;
 
 // import java.util.ArrayList;
 import java.util.List;
